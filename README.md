@@ -4,7 +4,7 @@
   <!-- 1. HERO SECTION -->
   <div style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 60px 20px; text-align: center; border-radius: 0 0 25px 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
     
-    <img src="profile.jpg" width="180" height="180" style="border-radius: 50%; border: 6px solid white; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-bottom: 20px;">
+    <img src="Sravya Passport Photo.jpg" width="180" height="180" style="border-radius: 50%; border: 6px solid white; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-bottom: 20px;">
     
     <h1 style="font-size: 3em; margin: 0; font-weight: 800; letter-spacing: -1px; text-transform: uppercase;">Sravya Kodavatiganti</h1>
     
