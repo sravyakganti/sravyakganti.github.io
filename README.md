@@ -1,5 +1,5 @@
+<!-- HEADER & PROFILE SECTION -->
 <div align="center">
-  <!-- PROFILE PICTURE -->
   <img src="Sravya Passport Photo.jpg" width="160" height="160" style="border-radius: 50%; border: 4px solid #ffffff; box-shadow: 0px 0px 15px rgba(0,0,0,0.2);">
   
   <h1>Sravya Kodavatiganti</h1>
@@ -10,7 +10,7 @@
     I specialize in building cloud-native pipelines, deploying GenAI models, and designing executive dashboards.
   </p>
 
-  <!-- SOCIAL LINKS -->
+  <!-- CONTACT BADGES -->
   <p>
     <a href="https://www.linkedin.com/in/sravya-kodavatiganti-5b99681b0/">
       <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
@@ -25,13 +25,21 @@
       <img src="https://img.shields.io/badge/Resume-Download_PDF-FF5722?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" />
     </a>
   </p>
+
+  <!-- NAVIGATION BAR (Click to Jump) -->
+  <p>
+    <a href="#-professional-experience"><b>💼 Experience</b></a> •
+    <a href="#-technical-stack--proficiency"><b>🛠️ Skills</b></a> •
+    <a href="#-featured-projects"><b>🚀 Projects</b></a> •
+    <a href="#-academic-highlights"><b>🎓 Academic</b></a>
+  </p>
 </div>
 
 <br>
 
 ---
 
-## 💼 Professional Experience
+<h2 align="center">💼 Professional Experience</h2>
 
 ### **Business Intelligence Engineer | Northern Trust**
 **Jun 2024 – Present | USA**
@@ -49,7 +57,7 @@
 
 ---
 
-## 🛠️ Technical Stack & Proficiency
+<h2 align="center">🛠️ Technical Stack & Proficiency</h2>
 
 | Domain | Core Competencies |
 | :--- | :--- |
@@ -61,12 +69,13 @@
 
 ---
 
-## 🚀 Featured Projects
+<h2 align="center">🚀 Featured Projects</h2>
 
 ### 🧠 Data Science & AI
 
-#### [Real-Time Predictive Maintenance Engine (MLOps)](https://github.com/sravyakganti/predictive-maintenance-mlops)
+####  [Real-Time Predictive Maintenance Engine (MLOps)](https://github.com/sravyakganti/predictive-maintenance-mlops)
 **The Challenge:** Machines break unexpectedly, costing millions in downtime.
+
 **The Solution:** Built an End-to-End IoT system that streams sensor data and predicts failure 20 cycles in advance using **XGBoost**.
 *   **Tech:** `Python` `XGBoost` `FastAPI` `Docker`
 *   **Highlight:** Deployed a live API that flags "Critical" status in real-time.
@@ -79,11 +88,11 @@
 
 ####  [The Corporate Brain: Private GenAI Chatbot](https://github.com/sravyakganti/local-rag-document-assistant)
 **The Challenge:** Searching internal documents securely without API costs.
+
 **The Solution:** 100% offline RAG tool using **Llama 3** and **ChromaDB**.
 *   **Tech:** `Llama 3` `LangChain` `Streamlit` `RAG`
 *   **Highlight:** Zero-cost architecture with total data privacy.
 
-<!-- PLACEHOLDER FOR IMAGE: Upload a screenshot of your Chatbot to the repo and link it here -->
 ![Chatbot UI](https://raw.githubusercontent.com/sravyakganti/local-rag-document-assistant/main/chatbot_ui.png)
 <br>
 [**View Code**](https://github.com/sravyakganti/local-rag-document-assistant)
@@ -92,25 +101,26 @@
 
 ### 📊 Data Analytics & BI
 
-#### [E-Commerce Customer Retention & Cohort Analysis](https://github.com/sravyakganti/ecommerce-retention-sql)
+####  [E-Commerce Customer Retention & Cohort Analysis](https://github.com/sravyakganti/ecommerce-retention-sql)
 **The Challenge:** Identify exactly when customers stop buying to improve LTV.
+
 **The Solution:** Processed 500k rows using **SQL Window Functions** to build a Cohort Heatmap.
 *   **Tech:** `Advanced SQL` `DuckDB` `Tableau` `Python`
 *   **Highlight:** Visualized a 15% retention drop in Q1 2011.
 
-<!-- TABLEAU HEATMAP IMAGE -->
-![Tableau Heatmap](https://raw.githubusercontent.com/sravyakganti/ecommerce-retention-sql/main/E-commerce Customer tableau.png)
+![Tableau Heatmap](https://raw.githubusercontent.com/sravyakganti/ecommerce-retention-sql/main/E-commerce%20Customer%20tableau.png)
 <br>
 [**View Interactive Dashboard**](https://public.tableau.com/app/profile/sravya.kodavatiganti/viz/Ecommerce_Customer_Retention/E-CommerceCustomerRetentionCohorts?publish=yes) | [**View SQL Logic**](https://github.com/sravyakganti/ecommerce-retention-sql) 
 
 <br>
 
-####  [Telco Subscription Risk Dashboard](https://github.com/sravyakganti/Telco-Churn-Power-BI-)
+#### 4. [Telco Subscription Risk Dashboard](https://github.com/sravyakganti/Telco-Churn-Power-BI-)
+**The Challenge:** Reduce subscriber churn for a telecom provider.
+
 **The Solution:** An interactive Executive Dashboard identifying high-risk segments.
 *   **Tech:** `Power BI` `DAX` `Data Modeling`
 
-<!-- POWER BI IMAGE -->
-![Power BI Dashboard](https://raw.githubusercontent.com/sravyakganti/Telco-Churn-Power-BI-/main/Executive Overview.png)
+![Power BI Dashboard](https://raw.githubusercontent.com/sravyakganti/Telco-Churn-Power-BI-/main/Executive%20Overview.png)
 <br>
 [**View Project**](https://github.com/sravyakganti/Telco-Churn-Power-BI-)
 
@@ -118,24 +128,31 @@
 
 ### 🏗️ Data Engineering
 
-#### [End-to-End Automated BI Pipeline](https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline)
+#### 5. [End-to-End Automated BI Pipeline](https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline)
+**The Challenge:** Manual reporting was slow and error-prone.
+
 **The Solution:** Fully automated ETL pipeline moving data from API $\to$ Snowflake $\to$ Power BI.
 *   **Tech:** `Snowflake` `dbt` `GitHub Actions` `Python`
 
-<!-- DBT LINEAGE OR SNOWFLAKE IMAGE -->
 ![Pipeline Architecture](https://raw.githubusercontent.com/sravyakganti/End-to-End-Data-BI-Pipeline/main/dashboard-screenshot.png)
 <br>
 [**View Code**](https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline)
 
-####  [Supply Chain Dimensional Modeling](https://github.com/sravyakganti/Supply-Chain-Data-Modeling)
+<br>
+
+#### 6. [Supply Chain Dimensional Modeling](https://github.com/sravyakganti/Supply-Chain-Data-Modeling)
+**The Challenge:** Complex queries were taking too long to run on raw data.
+
 **The Solution:** Transformed 3NF data into a **Star Schema** optimized for analytics.
 *   **Tech:** `Data Warehousing` `SQL` `Kimball Methodology`
-![Data Modeling](https://raw.githubusercontent.com/sravyakganti/Supply-Chain-Data-Modeling/main/Data Modeling.png)
-*   [**View Code**](https://github.com/sravyakganti/Supply-Chain-Data-Modeling)
+
+![Data Modeling](https://raw.githubusercontent.com/sravyakganti/Supply-Chain-Data-Modeling/main/Data%20Modeling.png)
+<br>
+[**View Code**](https://github.com/sravyakganti/Supply-Chain-Data-Modeling)
 
 ---
 
-### 🎓 Academic Projects
+<h2 align="center">🎓 Academic Highlights</h2>
 
 #### **Big Data Reporting & ETL Optimization**
 *   Built MapReduce workflows using **Apache Oozie**, improving ETL data throughput by **45%** across 3 reporting pipelines.
