@@ -65,7 +65,7 @@
 
 ### 🧠 Data Science & AI
 
-#### 1. [Real-Time Predictive Maintenance Engine (MLOps)](https://github.com/sravyakganti/predictive-maintenance-mlops)
+#### [Real-Time Predictive Maintenance Engine (MLOps)](https://github.com/sravyakganti/predictive-maintenance-mlops)
 **The Challenge:** Machines break unexpectedly, costing millions in downtime.
 **The Solution:** Built an End-to-End IoT system that streams sensor data and predicts failure 20 cycles in advance using **XGBoost**.
 *   **Tech:** `Python` `XGBoost` `FastAPI` `Docker`
@@ -77,7 +77,7 @@
 
 <br>
 
-#### 2. [The Corporate Brain: Private GenAI Chatbot](https://github.com/sravyakganti/local-rag-document-assistant)
+####  [The Corporate Brain: Private GenAI Chatbot](https://github.com/sravyakganti/local-rag-document-assistant)
 **The Challenge:** Searching internal documents securely without API costs.
 **The Solution:** 100% offline RAG tool using **Llama 3** and **ChromaDB**.
 *   **Tech:** `Llama 3` `LangChain` `Streamlit` `RAG`
@@ -92,7 +92,7 @@
 
 ### 📊 Data Analytics & BI
 
-#### 3. [E-Commerce Customer Retention & Cohort Analysis](https://github.com/sravyakganti/ecommerce-retention-sql)
+#### [E-Commerce Customer Retention & Cohort Analysis](https://github.com/sravyakganti/ecommerce-retention-sql)
 **The Challenge:** Identify exactly when customers stop buying to improve LTV.
 **The Solution:** Processed 500k rows using **SQL Window Functions** to build a Cohort Heatmap.
 *   **Tech:** `Advanced SQL` `DuckDB` `Tableau` `Python`
@@ -105,7 +105,7 @@
 
 <br>
 
-#### 4. [Telco Subscription Risk Dashboard](https://github.com/sravyakganti/Telco-Churn-Power-BI-)
+####  [Telco Subscription Risk Dashboard](https://github.com/sravyakganti/Telco-Churn-Power-BI-)
 **The Solution:** An interactive Executive Dashboard identifying high-risk segments.
 *   **Tech:** `Power BI` `DAX` `Data Modeling`
 
@@ -118,16 +118,16 @@
 
 ### 🏗️ Data Engineering
 
-#### 5. [End-to-End Automated BI Pipeline](https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline)
+#### [End-to-End Automated BI Pipeline](https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline)
 **The Solution:** Fully automated ETL pipeline moving data from API $\to$ Snowflake $\to$ Power BI.
 *   **Tech:** `Snowflake` `dbt` `GitHub Actions` `Python`
 
 <!-- DBT LINEAGE OR SNOWFLAKE IMAGE -->
-![Pipeline Architecture](https://raw.githubusercontent.com/sravyakganti/End-to-End-Data-BI-Pipeline/main/End-to-End Pipeline Architecture.drawio.png)
+![Pipeline Architecture](https://raw.githubusercontent.com/sravyakganti/End-to-End-Data-BI-Pipeline/main/dashboard-screenshot.png)
 <br>
 [**View Code**](https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline)
 
-#### 6. [Supply Chain Dimensional Modeling](https://github.com/sravyakganti/Supply-Chain-Data-Modeling)
+####  [Supply Chain Dimensional Modeling](https://github.com/sravyakganti/Supply-Chain-Data-Modeling)
 **The Solution:** Transformed 3NF data into a **Star Schema** optimized for analytics.
 *   **Tech:** `Data Warehousing` `SQL` `Kimball Methodology`
 ![Data Modeling](https://raw.githubusercontent.com/sravyakganti/Supply-Chain-Data-Modeling/main/Data Modeling.png)
