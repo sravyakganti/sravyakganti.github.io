@@ -28,18 +28,20 @@
 
   <!-- NAVIGATION BAR (Click to Jump) -->
   <p>
-    <a href="#-professional-experience"><b>💼 Experience</b></a> •
-    <a href="#-technical-stack--proficiency"><b>🛠️ Skills</b></a> •
-    <a href="#-featured-projects"><b>🚀 Projects</b></a> •
-    <a href="#-academic-highlights"><b>🎓 Academic</b></a>
+    <a href="#experience"><b>💼 Experience</b></a> •
+    <a href="#skills"><b>🛠️ Skills</b></a> •
+    <a href="#projects"><b>🚀 Projects</b></a> •
+    <a href="#academic"><b>🎓 Academic</b></a>
   </p>
 </div>
 
 <br>
+<br>
 
 ---
 
-<h2 align="center">💼 Professional Experience</h2>
+<!-- PROFESSIONAL EXPERIENCE SECTION -->
+<h2 id="experience" align="center">💼 Professional Experience</h2>
 
 ### **Business Intelligence Engineer | Northern Trust**
 **Jun 2024 – Present | USA**
@@ -48,6 +50,8 @@
 *   **Fraud Detection:** Integrated an anomaly detection model into BI workflows, reducing review cycles by **20%** for high-value accounts.
 *   **Data Integrity:** Engineered SQL/Python pipelines achieving **99.9% reporting accuracy** for regulatory submissions.
 
+<br>
+
 ### **Data Engineer | Accenture**
 **Aug 2020 – Aug 2023 | India**
 *   **Pipeline Engineering:** Developed Python/SQL ETL pipelines to consolidate data from **15+ siloed financial systems**.
@@ -55,9 +59,12 @@
 *   **Optimization:** Optimized 100+ T-SQL stored procedures, resulting in a **64% reduction** in batch processing time.
 *   **Automation:** Automated end-to-end data validation, saving the finance team **23+ hours per week**.
 
+<br>
+
 ---
 
-<h2 align="center">🛠️ Technical Stack & Proficiency</h2>
+<!-- SKILLS SECTION -->
+<h2 id="skills" align="center">🛠️ Technical Stack & Proficiency</h2>
 
 | Domain | Core Competencies |
 | :--- | :--- |
@@ -67,14 +74,18 @@
 | **BI & Visualization** | ![PowerBI](https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=black) ![Tableau](https://img.shields.io/badge/Tableau-E97627?logo=tableau&logoColor=white) ![DAX](https://img.shields.io/badge/DAX-Calculations-000000?style=flat&logo=powerbi) ![Excel](https://img.shields.io/badge/Excel-Advanced-217346?logo=microsoft-excel&logoColor=white) |
 | **DevOps & Tools** | ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?logo=jenkins&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white) ![Azure DevOps](https://img.shields.io/badge/Azure_DevOps-0078D4?logo=azuredevops&logoColor=white) |
 
+<br>
+
 ---
 
-<h2 align="center">🚀 Featured Projects</h2>
+<!-- PROJECTS SECTION -->
+<h2 id="projects" align="center">🚀 Featured Projects</h2>
 
 ### 🧠 Data Science & AI
 
 ####  [Real-Time Predictive Maintenance Engine (MLOps)](https://github.com/sravyakganti/predictive-maintenance-mlops)
 **The Challenge:** Machines break unexpectedly, costing millions in downtime.
+<br>
 
 **The Solution:** Built an End-to-End IoT system that streams sensor data and predicts failure 20 cycles in advance using **XGBoost**.
 *   **Tech:** `Python` `XGBoost` `FastAPI` `Docker`
@@ -86,10 +97,11 @@
 
 <br>
 
-####  [The Corporate Brain: Private GenAI Chatbot](https://github.com/sravyakganti/local-rag-document-assistant)
+#### [The Corporate Brain: Private GenAI Chatbot](https://github.com/sravyakganti/local-rag-document-assistant)
 **The Challenge:** Searching internal documents securely without API costs.
+<br>
 
-**The Solution:** 100% offline RAG tool using **Llama 3** and **ChromaDB**.
+**The Solution:** A 100% offline RAG tool using **Llama 3** and **ChromaDB**.
 *   **Tech:** `Llama 3` `LangChain` `Streamlit` `RAG`
 *   **Highlight:** Zero-cost architecture with total data privacy.
 
@@ -103,6 +115,7 @@
 
 ####  [E-Commerce Customer Retention & Cohort Analysis](https://github.com/sravyakganti/ecommerce-retention-sql)
 **The Challenge:** Identify exactly when customers stop buying to improve LTV.
+<br>
 
 **The Solution:** Processed 500k rows using **SQL Window Functions** to build a Cohort Heatmap.
 *   **Tech:** `Advanced SQL` `DuckDB` `Tableau` `Python`
@@ -114,8 +127,9 @@
 
 <br>
 
-#### 4. [Telco Subscription Risk Dashboard](https://github.com/sravyakganti/Telco-Churn-Power-BI-)
+####  [Telco Subscription Risk Dashboard](https://github.com/sravyakganti/Telco-Churn-Power-BI-)
 **The Challenge:** Reduce subscriber churn for a telecom provider.
+<br>
 
 **The Solution:** An interactive Executive Dashboard identifying high-risk segments.
 *   **Tech:** `Power BI` `DAX` `Data Modeling`
@@ -128,8 +142,9 @@
 
 ### 🏗️ Data Engineering
 
-#### 5. [End-to-End Automated BI Pipeline](https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline)
+####  [End-to-End Automated BI Pipeline](https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline)
 **The Challenge:** Manual reporting was slow and error-prone.
+<br>
 
 **The Solution:** Fully automated ETL pipeline moving data from API $\to$ Snowflake $\to$ Power BI.
 *   **Tech:** `Snowflake` `dbt` `GitHub Actions` `Python`
@@ -138,10 +153,9 @@
 <br>
 [**View Code**](https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline)
 
-<br>
-
-#### 6. [Supply Chain Dimensional Modeling](https://github.com/sravyakganti/Supply-Chain-Data-Modeling)
+####  [Supply Chain Dimensional Modeling](https://github.com/sravyakganti/Supply-Chain-Data-Modeling)
 **The Challenge:** Complex queries were taking too long to run on raw data.
+<br>
 
 **The Solution:** Transformed 3NF data into a **Star Schema** optimized for analytics.
 *   **Tech:** `Data Warehousing` `SQL` `Kimball Methodology`
@@ -150,9 +164,12 @@
 <br>
 [**View Code**](https://github.com/sravyakganti/Supply-Chain-Data-Modeling)
 
+<br>
+
 ---
 
-<h2 align="center">🎓 Academic Highlights</h2>
+<!-- ACADEMIC PROJECTS SECTION -->
+<h2 id="academic" align="center">🎓 Academic Highlights</h2>
 
 #### **Big Data Reporting & ETL Optimization**
 *   Built MapReduce workflows using **Apache Oozie**, improving ETL data throughput by **45%** across 3 reporting pipelines.
