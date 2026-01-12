@@ -1,31 +1,58 @@
-Sravya Kodavatiganti
-Business Intelligence Engineer | Data Analyst | Data Scientist
+<div align="center">
+  <img src="Sravya Passport Photo.jpg" width="150" height="150" style="border-radius: 50%; border: 3px solid #333;">
+  <h1>Sravya Kodavatiganti</h1>
+  <h3>Business Intelligence Engineer | Data Scientist | Data Engineer</h3>
+  <p>
+    <b>Bridging the gap between Raw Data and Business ROI.</b><br>
+    I specialize in building cloud-native pipelines, deploying GenAI models, and designing executive dashboards.
+  </p>
 
-I build end-to-end data systems that drive business decisions. From engineering pipelines to deploying AI models, I bridge the gap between raw data and ROI.
+  <!-- SOCIAL LINKS -->
+  <p>
+    <a href="https://www.linkedin.com/in/sravya-kodavatiganti-5b99681b0/">
+      <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+    </a>
+    <a href="https://medium.com/@sravya.sravya1999">
+      <img src="https://img.shields.io/badge/Medium-Read_Case_Studies-12100E?style=for-the-badge&logo=medium&logoColor=white" />
+    </a>
+    <a href="mailto:sravya.sravya1999@gmail.com">
+      <img src="https://img.shields.io/badge/Email-Contact_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+    </a>
+    <a href="resume.pdf">
+      <img src="https://img.shields.io/badge/Resume-Download_PDF-FF5722?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" />
+    </a>
+  </p>
+</div>
 
-<!-- CONTACT BADGES -->
-<p align="left">
-  <a href="https://www.linkedin.com/in/sravya-kodavatiganti-5b99681b0/">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="https://medium.com/@sravya.sravya1999">
-    <img src="https://img.shields.io/badge/Medium-Read_Case_Studies-12100E?style=for-the-badge&logo=medium&logoColor=white" />
-  </a>
-  <a href="mailto:sravya.sravya1999@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Contact_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="resume.pdf">
-    <img src="https://img.shields.io/badge/Resume-Download_PDF-FF5722?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" />
-  </a>
-</p>
+<br>
 
-Technical Stack
+---
 
-| Domain | Skills |
+Professional Experience
+
+Business Intelligence Engineer | Northern Trust
+Jun 2024 – Present | USA
+GenAI Implementation:Led the design of a RAG (Retrieval Augmented Generation) solution to automate financial report summaries, cutting review time by 33%.
+Cloud Migration: Migrated high-volume financial pipelines to Azure Data Factory, reducing data ingestion latency by 42%.
+Fraud Detection: Integrated an anomaly detection model into BI workflows, reducing review cycles by 20% for high-value accounts.
+
+Data Engineer | Accenture
+Aug 2020 – Aug 2023 | India
+Pipeline Engineering: Developed Python/SQL ETL pipelines to consolidate data from 15+ siloed financial systems.
+Data Modeling: Designed scalable Star-Schema models for credit risk reporting, enabling granular performance tracking.
+Optimization: Optimized 100+ T-SQL stored procedures, resulting in a **64% reduction** in batch processing time.
+
+---
+
+Technical Stack & Proficiency
+
+| Domain | Core Competencies |
 | :--- | :--- |
-| Data Engineering | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?logo=postgresql&logoColor=white) ![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?logo=snowflake&logoColor=white) ![dbt](https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white) |
-| Data Science | ![XGBoost](https://img.shields.io/badge/XGBoost-EB4034?logo=xgboost&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?logo=chainlink&logoColor=white) ![Ollama](https://img.shields.io/badge/GenAI-Llama3-000000?logo=meta&logoColor=white) |
-| Analytics & BI | ![Tableau](https://img.shields.io/badge/Tableau-E97627?logo=tableau&logoColor=white) ![PowerBI](https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=black) ![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?logo=duckdb&logoColor=black) |
+| Cloud & Big Data | ![Azure](https://img.shields.io/badge/Azure-0078D4?logo=microsoft-azure&logoColor=white) ![Synapse](https://img.shields.io/badge/Azure_Synapse-0078D4?logo=microsoft-azure&logoColor=white) ![Data Factory](https://img.shields.io/badge/Data_Factory-0078D4?logo=microsoft-azure&logoColor=white) ![Hadoop](https://img.shields.io/badge/Hadoop-66CCFF?logo=apachehadoop&logoColor=black) ![Spark](https://img.shields.io/badge/Spark-E25A1C?logo=apachespark&logoColor=white) ![Oozie](https://img.shields.io/badge/Apache_Oozie-E25A1C?logo=apache&logoColor=white) |
+| Data Engineering | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-Advanced-4479A1?logo=postgresql&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-4EAA25?logo=gnu-bash&logoColor=white) ![Airflow](https://img.shields.io/badge/Airflow-017CEE?logo=apacheairflow&logoColor=white) ![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?logo=snowflake&logoColor=white) ![dbt](https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white) |
+| Data Science & AI | ![RAG](https://img.shields.io/badge/GenAI-RAG-000000?logo=openai&logoColor=white) ![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?logo=scikit-learn&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?logo=chainlink&logoColor=white) ![Ollama](https://img.shields.io/badge/GenAI-Llama3-000000?logo=meta&logoColor=white) |
+| BI & Visualization | ![PowerBI](https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=black) ![Tableau](https://img.shields.io/badge/Tableau-E97627?logo=tableau&logoColor=white) ![DAX](https://img.shields.io/badge/DAX-Calculations-000000?style=flat&logo=powerbi) ![Excel](https://img.shields.io/badge/Excel-Advanced-217346?logo=microsoft-excel&logoColor=white) |
+| DevOps & Tools | ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?logo=jenkins&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white) ![Azure DevOps](https://img.shields.io/badge/Azure_DevOps-0078D4?logo=azuredevops&logoColor=white) |
 
 ---
 
@@ -33,7 +60,7 @@ Featured Projects
 
 Data Science & AI
 
- 1. [Real-Time Predictive Maintenance Engine (MLOps)](https://github.com/sravyakganti/predictive-maintenance-mlops)
+1. [Real-Time Predictive Maintenance Engine (MLOps)](https://github.com/sravyakganti/predictive-maintenance-mlops)
 The Challenge: Machines break unexpectedly, costing millions in downtime.
 The Solution: Built an End-to-End IoT system that streams sensor data and predicts failure 20 cycles in advance using XGBoost.
 Tech: `Python` `XGBoost` `FastAPI` `Docker`
@@ -45,12 +72,15 @@ Highlight: Deployed a live API that flags "Critical" status in real-time.
 
 <br>
 
- 2. [The Corporate Brain: Private GenAI Chatbot](https://github.com/sravyakganti/local-rag-document-assistant)
+2. [The Corporate Brain: Private GenAI Chatbot](https://github.com/sravyakganti/local-rag-document-assistant)
 The Challenge: Companies need to search internal documents without leaking data to public APIs.
-The Solution: A 100% offline RAG (Retrieval Augmented Generation) tool using Llama 3 and ChromaDB.
+The Solution: A 100% offline RAG tool using Llama 3 and ChromaDB.
 Tech: `Llama 3` `LangChain` `Streamlit` `RAG`
 Highlight: Zero-cost architecture with total data privacy.
- [View Code](https://github.com/sravyakganti/local-rag-document-assistant)
+
+![Chatbot UI](https://raw.githubusercontent.com/sravyakganti/local-rag-document-assistant/main/chatbot_ui.png)
+<br>
+[View Code](https://github.com/sravyakganti/local-rag-document-assistant)
 
 ---
 
@@ -58,41 +88,54 @@ Data Analytics & BI
 
 3. [E-Commerce Customer Retention & Cohort Analysis](https://github.com/sravyakganti/ecommerce-retention-sql)
 The Challenge: Identify exactly when customers stop buying to improve LTV.
-The Solution: Processed 500k rows of transaction data using SQL Window Functions to build a Cohort Heatmap.
+The Solution: Processed 500k rows using SQL Window Functions to build a Cohort Heatmap.
 Tech: `Advanced SQL` `DuckDB` `Tableau` `Python`
 Highlight: Visualized a 15% retention drop in Q1 2011.
 
-[View Interactive Dashboard (Tableau)](https://public.tableau.com/app/profile/sravya.kodavatiganti/viz/Book1_17677505850380/E-CommerceCustomerRetentionCohorts?publish=yes) | [View SQL Logic](https://github.com/sravyakganti/ecommerce-retention-sql)
+![Tableau Heatmap](https://raw.githubusercontent.com/sravyakganti/ecommerce-retention-sql/main/E-commerce Customer tableau.png)
+<br>
+[View Interactive Dashboard](https://public.tableau.com/app/profile/sravya.kodavatiganti/viz/Ecommerce_Customer_Retention/E-CommerceCustomerRetentionCohorts?publish=yes) | [View SQL Logic](https://github.com/sravyakganti/ecommerce-retention-sql)
+
 <br>
 
 4. [Telco Subscription Risk Dashboard](https://github.com/sravyakganti/Telco-Churn-Power-BI-)
-The Challenge: Reduce subscriber churn for a telecom provider.
 The Solution: An interactive Executive Dashboard identifying high-risk segments.
 Tech: `Power BI` `DAX` `Data Modeling`
-  [View Project](https://github.com/sravyakganti/Telco-Churn-Power-BI-)
+
+![Power BI Dashboard](https://raw.githubusercontent.com/sravyakganti/Telco-Churn-Power-BI-/main/Executive Overview.png)
+<br>
+[View Project](https://github.com/sravyakganti/Telco-Churn-Power-BI-)
 
 ---
 
 Data Engineering
 
 5. [End-to-End Automated BI Pipeline](https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline)
-The Challenge: Manual reporting was slow and error-prone.
 The Solution: Fully automated ETL pipeline moving data from API $\to$ Snowflake $\to$ Power BI.
 Tech: `Snowflake` `dbt` `GitHub Actions` `Python`
-   [View Code](https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline)
 
- 6. [Supply Chain Dimensional Modeling](https://github.com/sravyakganti/Supply-Chain-Data-Modeling)
-The Challenge: Complex queries were taking too long to run on raw data.
+![Pipeline Architecture](https://raw.githubusercontent.com/sravyakganti/End-to-End-Data-BI-Pipeline/main/Executive Overview.png)
+<br>
+[View Code](https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline)
+
+6. [Supply Chain Dimensional Modeling](https://github.com/sravyakganti/Supply-Chain-Data-Modeling)
 The Solution: Transformed 3NF data into a Star Schema optimized for analytics.
 Tech: `Data Warehousing` `SQL` `Kimball Methodology`
-   [View Code](https://github.com/sravyakganti/Supply-Chain-Data-Modeling)
+
+![Pipeline Architecture](https://raw.githubusercontent.com/sravyakganti/Supply-Chain-Data-Modeling/main/Data Modeling.png)
+[View Code](https://github.com/sravyakganti/Supply-Chain-Data-Modeling)
 
 ---
 
-Let's Connect
-I am currently open to roles in Business Intelligence, Data Engineering, and Data Science.
-<p align="center">
+Academic Projects
+Big Data Reporting (Apache Oozie): Built MapReduce workflows improving data throughput by 45%.
+GenAI Image Processing: Enabled remote diagnostics for 1,000+ users, reducing consultations by 35%.
+
+---
+
+<div align="center">
+  <h3>Ready to build data solutions?</h3>
   <a href="mailto:sravya.sravya1999@gmail.com">
     <img src="https://img.shields.io/badge/Send_Me_An_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-</p>
+</div>
