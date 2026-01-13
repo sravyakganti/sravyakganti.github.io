@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sravya Kodavatiganti | Data Portfolio</title>
+    <title>Sravya Kodavatiganti | Data Engineer & AI Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <style>
         /* --- GLOBAL STYLES --- */
@@ -145,7 +145,8 @@
         /* --- SKILLS GRID --- */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            /* FIXED: Changed 400px to 280px to fit on mobile phones */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
         .bento-card {
@@ -157,6 +158,7 @@
         }
         .bento-card:hover { transform: translateY(-5px); border-color: var(--accent-blue); box-shadow: 0 0 25px rgba(56, 189, 248, 0.15); }
         .bento-title { font-size: 1.6rem; font-weight: 800; color: var(--accent-purple); margin-bottom: 20px; border-bottom: 2px solid #30363d; padding-bottom: 10px; }
+        
         .badge-container img { margin: 5px; height: 34px; border-radius: 4px; transition: 0.2s; }
         .badge-container img:hover { transform: scale(1.1); }
 
@@ -187,10 +189,10 @@
         
         .project-desc { font-size: 1.2rem; color: #cbd5e1; margin-top: 0; margin-bottom: 15px; }
 
-        /* --- SMALLER IMAGES FOR SLEEK LOOK --- */
+        /* --- PROJECT IMAGES --- */
         .project-visual {
             width: 100%;
-            max-width: 450px; /* SHRUNK TO 450px */
+            max-width: 450px; 
             border-radius: 10px;
             border: 2px solid #30363d;
             margin-top: 20px;
@@ -226,16 +228,41 @@
         }
         .btn-outline:hover { background: #30363d; color: white; }
 
+        /* --- MOBILE MEDIA QUERIES --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            .section-header { font-size: 2rem; margin-top: 60px; }
+            .role-title { font-size: 1.2rem; }
+            
+            .nav-bar { 
+                width: 85%; 
+                display: flex; 
+                flex-wrap: wrap; 
+                justify-content: center; 
+                gap: 10px;
+                padding: 15px; 
+            }
+            .nav-bar a { margin: 0 5px; font-size: 0.9rem; }
+            
+            .container { padding: 20px 15px; }
+            .job-card, .project-card, .bio-box { padding: 20px; }
+            .job-title { font-size: 1.4rem; }
+            .project-visual { max-width: 100%; } /* Allows images to fill phone screen */
+            
+            .btn, .btn-outline { width: 100%; text-align: center; box-sizing: border-box; }
+        }
+
     </style>
 </head>
 <body>
 
     <!-- HERO HEADER -->
     <header class="fade-in">
-        <img src="Sravya Passport Photo.jpg" class="profile-img">
+        <!-- FIXED: Updated filename to avoid spaces. Rename your file to Sravya_Profile.jpg -->
+        <img src="Sravya_Profile.jpg" alt="Sravya Kodavatiganti" class="profile-img">
         <h1>Sravya Kodavatiganti</h1>
         <div class="role-title">
-            BI Engineer <span style="color:#38bdf8">|</span> Data Engineer <span style="color:#38bdf8">|</span> Data Scientist
+            BI Engineer <span style="color:#38bdf8">|</span> Data Engineer <span style="color:#38bdf8">|</span> AI Practitioner
         </div>
         <div class="contact-info">
             📍 California, USA &nbsp;&nbsp;•&nbsp;&nbsp; 📞 +1(201)-726-0636
@@ -250,16 +277,17 @@
 
         <div style="margin-top: 35px;">
             <a href="https://www.linkedin.com/in/sravya-kodavatiganti-5b99681b0/" target="_blank">
-                <img src="https://img.shields.io/badge/LINKEDIN-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" height="40">
+                <img src="https://img.shields.io/badge/LINKEDIN-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" height="40" alt="LinkedIn">
             </a>
             <a href="https://medium.com/@sravya.sravya1999" target="_blank">
-                <img src="https://img.shields.io/badge/MEDIUM-Read_Case_Studies-FFFFFF?style=for-the-badge&logo=medium&logoColor=black" height="40">
+                <img src="https://img.shields.io/badge/MEDIUM-Read_Case_Studies-FFFFFF?style=for-the-badge&logo=medium&logoColor=black" height="40" alt="Medium Blog">
             </a>
             <a href="mailto:sravya.sravya1999@gmail.com">
-                <img src="https://img.shields.io/badge/EMAIL-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" height="40">
+                <img src="https://img.shields.io/badge/EMAIL-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" height="40" alt="Email Me">
             </a>
-            <a href="resume.pdf" target="_blank">
-                <img src="https://img.shields.io/badge/RESUME-Download_PDF-FF5722?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" height="40">
+            <!-- FIXED: Pointed to clean filename. Rename your PDF to Sravya_Kodavatiganti_Resume.pdf -->
+            <a href="Sravya_Kodavatiganti resume.pdf" target="_blank">
+                <img src="https://img.shields.io/badge/RESUME-Download_PDF-FF5722?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" height="40" alt="Download Resume">
             </a>
         </div>
     </header>
@@ -279,7 +307,7 @@
         <h2 id="experience" class="section-header fade-in delay-1">💼 Professional Experience</h2>
 
         <div class="job-card fade-in delay-2">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
                 <h3 class="job-title">Business Intelligence Engineer | Northern Trust</h3>
                 <span class="job-meta">JUN 2024 – PRESENT</span>
             </div>
@@ -293,7 +321,7 @@
         </div>
 
         <div class="job-card fade-in delay-2" style="border-left-color: #a855f7;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
                 <h3 class="job-title" style="color: #a855f7;">Data Engineer | Accenture</h3>
                 <span class="job-meta" style="color: #a855f7;">AUG 2020 – AUG 2023</span>
             </div>
@@ -307,47 +335,48 @@
         </div>
 
         <!-- SKILLS BENTO GRID -->
+        <!-- FIXED: Added ALT tags to all images so Recruiters can Ctrl+F search your skills -->
         <h2 id="skills" class="section-header">🛠️ Technical Arsenal</h2>
         <div class="skills-grid">
             <div class="bento-card">
                 <div class="bento-title">☁️ Cloud & Big Data</div>
                 <div class="badge-container">
-                    <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white">
-                    <img src="https://img.shields.io/badge/Synapse-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white">
-                    <img src="https://img.shields.io/badge/Data_Factory-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white">
-                    <img src="https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black">
-                    <img src="https://img.shields.io/badge/Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white">
-                    <img src="https://img.shields.io/badge/Apache_Oozie-E25A1C?style=for-the-badge&logo=apache&logoColor=white">
+                    <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure">
+                    <img src="https://img.shields.io/badge/Synapse-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure Synapse">
+                    <img src="https://img.shields.io/badge/Data_Factory-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure Data Factory">
+                    <img src="https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black" alt="Hadoop">
+                    <img src="https://img.shields.io/badge/Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white" alt="Apache Spark">
+                    <img src="https://img.shields.io/badge/Apache_Oozie-E25A1C?style=for-the-badge&logo=apache&logoColor=white" alt="Oozie">
                 </div>
             </div>
             <div class="bento-card">
                 <div class="bento-title" style="color: #38bdf8;">⚙️ Engineering</div>
                 <div class="badge-container">
-                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-                    <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white">
-                    <img src="https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white">
-                    <img src="https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white">
-                    <img src="https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white">
-                    <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white">
+                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+                    <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL">
+                    <img src="https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white" alt="Snowflake">
+                    <img src="https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white" alt="dbt">
+                    <img src="https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white" alt="Airflow">
+                    <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash Scripting">
                 </div>
             </div>
             <div class="bento-card">
-                <div class="bento-title" style="color: #f43f5e;">🤖 Data Science</div>
+                <div class="bento-title" style="color: #f43f5e;">🤖 Data Science & AI</div>
                 <div class="badge-container">
-                    <img src="https://img.shields.io/badge/GenAI_/_LLM-000000?style=for-the-badge&logo=openai&logoColor=white">
-                    <img src="https://img.shields.io/badge/XGBoost-EB4034?style=for-the-badge&logo=xgboost&logoColor=white">
-                    <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white">
-                    <img src="https://img.shields.io/badge/Ollama-Llama3-000000?style=for-the-badge&logo=meta&logoColor=white">
-                    <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white">
+                    <img src="https://img.shields.io/badge/GenAI_/_LLM-000000?style=for-the-badge&logo=openai&logoColor=white" alt="Generative AI">
+                    <img src="https://img.shields.io/badge/XGBoost-EB4034?style=for-the-badge&logo=xgboost&logoColor=white" alt="XGBoost">
+                    <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white" alt="LangChain">
+                    <img src="https://img.shields.io/badge/Ollama-Llama3-000000?style=for-the-badge&logo=meta&logoColor=white" alt="Ollama Llama 3">
+                    <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit Learn">
                 </div>
             </div>
             <div class="bento-card">
                 <div class="bento-title" style="color: #fbbf24;">📊 BI & Analytics</div>
                 <div class="badge-container">
-                    <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black">
-                    <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white">
-                    <img src="https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black">
-                    <img src="https://img.shields.io/badge/DAX-000000?style=for-the-badge&logo=powerbi">
+                    <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI">
+                    <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau">
+                    <img src="https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black" alt="DuckDB">
+                    <img src="https://img.shields.io/badge/DAX-000000?style=for-the-badge&logo=powerbi" alt="DAX">
                 </div>
             </div>
         </div>
@@ -359,26 +388,25 @@
         <div class="project-card">
             <h3 class="project-title">1. Real-Time Predictive Maintenance Engine (MLOps)</h3>
             
-            <!-- TECH STACK BADGES -->
             <div style="margin-bottom: 20px;">
-                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" height="28">
-                <img src="https://img.shields.io/badge/XGBoost-EB4034?style=for-the-badge&logo=xgboost&logoColor=white" height="28">
-                <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" height="28">
-                <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" height="28" alt="Python">
+                <img src="https://img.shields.io/badge/XGBoost-EB4034?style=for-the-badge&logo=xgboost&logoColor=white" height="28" alt="XGBoost">
+                <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" height="28" alt="FastAPI">
+                <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" height="28" alt="Docker">
             </div>
             
             <div class="project-section">
-                <span class="label-challenge">🛑 The Challenge</span>
+                <span class="tag-challenge">🛑 The Challenge</span>
                 <p class="project-text">Industrial machines fail unexpectedly, costing millions in downtime. Traditional reactive maintenance is inefficient.</p>
             </div>
             
             <div class="project-section">
-                <span class="label-solution">⚡ The Solution</span>
+                <span class="tag-solution">⚡ The Solution</span>
                 <p class="project-text">Architected an End-to-End MLOps pipeline. Ingested live sensor streams to train an <b>XGBoost</b> regressor, deployed via a Dockerized <b>FastAPI</b> service to predict "Remaining Useful Life" (RUL) with <b>89% accuracy</b>.</p>
             </div>
 
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/predictive-maintenance-mlops/main/Animation.gif" class="project-visual">
+                <img src="https://raw.githubusercontent.com/sravyakganti/predictive-maintenance-mlops/main/Animation.gif" class="project-visual" alt="MLOps Demo GIF">
             </div>
             <br>
             <a href="https://github.com/sravyakganti/predictive-maintenance-mlops" class="btn">View Code & Architecture</a>
@@ -386,28 +414,28 @@
 
         <!-- Project 2 -->
         <div class="project-card" style="border-color: #a855f7;">
-            <h3 class="project-title" style="color: #a855f7;">2. The Corporate Brain: Private GenAI Chatbot</h3>
+            <!-- FIXED: Updated title to include "Enterprise RAG" keyword -->
+            <h3 class="project-title" style="color: #a855f7;">2. The Corporate Brain: Enterprise RAG (Private GenAI)</h3>
             
-            <!-- TECH STACK BADGES -->
             <div style="margin-bottom: 20px;">
-                <img src="https://img.shields.io/badge/GenAI_Llama3-000000?style=for-the-badge&logo=meta&logoColor=white" height="28">
-                <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white" height="28">
-                <img src="https://img.shields.io/badge/ChromaDB-475059?style=for-the-badge&logo=siemens&logoColor=white" height="28">
-                <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/GenAI_Llama3-000000?style=for-the-badge&logo=meta&logoColor=white" height="28" alt="Llama 3">
+                <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white" height="28" alt="LangChain">
+                <img src="https://img.shields.io/badge/ChromaDB-475059?style=for-the-badge&logo=siemens&logoColor=white" height="28" alt="ChromaDB">
+                <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" height="28" alt="Streamlit">
             </div>
             
             <div class="project-section">
-                <span class="label-challenge">🛑 The Challenge</span>
+                <span class="tag-challenge">🛑 The Challenge</span>
                 <p class="project-text">Enterprises need to leverage proprietary knowledge locked in PDFs but cannot upload sensitive financial/HR data to public APIs like ChatGPT due to <b>data privacy regulations</b>.</p>
             </div>
             
             <div class="project-section">
-                <span class="label-solution">⚡ The Solution</span>
+                <span class="tag-solution">⚡ The Solution</span>
                 <p class="project-text">Engineered a <b>Privacy-First RAG Architecture</b>. Integrated <b>Llama 3 (Ollama)</b> with <b>ChromaDB</b> for local vector retrieval. The pipeline runs 100% offline with <b>zero data leakage</b>.</p>
             </div>
 
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/local-rag-document-assistant/main/chatbot_ui.png" class="project-visual">
+                <img src="https://raw.githubusercontent.com/sravyakganti/local-rag-document-assistant/main/chatbot_ui.png" class="project-visual" alt="RAG Chatbot UI">
             </div>
             <br>
             <a href="https://github.com/sravyakganti/local-rag-document-assistant" class="btn-outline">View Project Code</a>
@@ -417,26 +445,25 @@
         <div class="project-card" style="border-color: #fb923c;">
             <h3 class="project-title" style="color: #fb923c;">3. E-Commerce Retention & Cohort Analysis</h3>
             
-            <!-- TECH STACK BADGES -->
             <div style="margin-bottom: 20px;">
-                <img src="https://img.shields.io/badge/SQL_Advanced-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" height="28">
-                <img src="https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black" height="28">
-                <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" height="28">
-                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/SQL_Advanced-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" height="28" alt="Advanced SQL">
+                <img src="https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black" height="28" alt="DuckDB">
+                <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" height="28" alt="Tableau">
+                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" height="28" alt="Python">
             </div>
             
             <div class="project-section">
-                <span class="label-challenge">🛑 The Challenge</span>
+                <span class="tag-challenge">🛑 The Challenge</span>
                 <p class="project-text">High Customer Acquisition Costs (CAC) make retention critical, yet the business lacked visibility into specific cohort drop-off points, leading to wasted marketing spend.</p>
             </div>
             
             <div class="project-section">
-                <span class="label-solution">⚡ The Solution</span>
+                <span class="tag-solution">⚡ The Solution</span>
                 <p class="project-text">Developed a reusable <b>SQL Pipeline</b> using complex Window Functions (CTEs) to normalize transaction data. Visualized a critical <b>15% retention drop</b> in Q1 using <b>Tableau LOD expressions</b>.</p>
             </div>
 
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/ecommerce-retention-sql/main/E-commerce%20Customer%20tableau.png" class="project-visual">
+                <img src="https://raw.githubusercontent.com/sravyakganti/ecommerce-retention-sql/main/E-commerce%20Customer%20tableau.png" class="project-visual" alt="Tableau Dashboard">
             </div>
             <br>
             <a href="https://public.tableau.com/app/profile/sravya.kodavatiganti/viz/Ecommerce_Customer_Retention/E-CommerceCustomerRetentionCohorts?publish=yes" class="btn">Interactive Dashboard</a>
@@ -446,25 +473,24 @@
         <div class="project-card" style="border-color: #facc15;">
             <h3 class="project-title" style="color: #facc15;">4. Telco Subscription Risk Dashboard</h3>
             
-            <!-- TECH STACK BADGES -->
             <div style="margin-bottom: 20px;">
-                <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" height="28">
-                <img src="https://img.shields.io/badge/DAX-Calculations-000000?style=for-the-badge&logo=powerbi" height="28">
-                <img src="https://img.shields.io/badge/Data_Modeling-333333?style=for-the-badge" height="28">
+                <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" height="28" alt="Power BI">
+                <img src="https://img.shields.io/badge/DAX-Calculations-000000?style=for-the-badge&logo=powerbi" height="28" alt="DAX">
+                <img src="https://img.shields.io/badge/Data_Modeling-333333?style=for-the-badge" height="28" alt="Data Modeling">
             </div>
 
             <div class="project-section">
-                <span class="label-challenge">🛑 The Challenge</span>
+                <span class="tag-challenge">🛑 The Challenge</span>
                 <p class="project-text">A Telecom provider faced rising churn rates but lacked actionable insights into which specific demographics and contract types were high-risk.</p>
             </div>
             
             <div class="project-section">
-                <span class="label-solution">⚡ The Solution</span>
+                <span class="tag-solution">⚡ The Solution</span>
                 <p class="project-text">Designed an executive <b>Power BI Dashboard</b> utilizing complex <b>DAX measures</b> to dynamically model churn probability. Identified high-risk segments, enabling the retention team to prioritize intervention for at-risk revenue.</p>
             </div>
 
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/Telco-Churn-Power-BI-/main/Executive%20Overview.png" class="project-visual">
+                <img src="https://raw.githubusercontent.com/sravyakganti/Telco-Churn-Power-BI-/main/Executive%20Overview.png" class="project-visual" alt="Power BI Overview">
             </div>
             <br>
             <a href="https://github.com/sravyakganti/Telco-Churn-Power-BI-" class="btn">View Power BI Files</a>
@@ -474,26 +500,25 @@
         <div class="project-card" style="border-color: #38bdf8;">
             <h3 class="project-title" style="color: #38bdf8;">5. End-to-End Automated BI Pipeline</h3>
             
-            <!-- TECH STACK BADGES -->
             <div style="margin-bottom: 20px;">
-                <img src="https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white" height="28">
-                <img src="https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white" height="28">
-                <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" height="28">
-                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white" height="28" alt="Snowflake">
+                <img src="https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white" height="28" alt="dbt">
+                <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" height="28" alt="GitHub Actions">
+                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" height="28" alt="Python">
             </div>
 
             <div class="project-section">
-                <span class="label-challenge">🛑 The Challenge</span>
+                <span class="tag-challenge">🛑 The Challenge</span>
                 <p class="project-text">Manual CSV dumps resulted in stale data latency (24+ hours) and error-prone reporting, hindering real-time decision making.</p>
             </div>
             
             <div class="project-section">
-                <span class="label-solution">⚡ The Solution</span>
+                <span class="tag-solution">⚡ The Solution</span>
                 <p class="project-text">Built a fully automated <b>Modern Data Stack</b> pipeline. Orchestrated data flow from API → <b>Snowflake</b> → Power BI using <b>dbt</b> for transformation and <b>GitHub Actions</b> for CI/CD, reducing reporting latency to near real-time.</p>
             </div>
 
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/End-to-End-Data-BI-Pipeline/main/dashboard-screenshot.png" class="project-visual">
+                <img src="https://raw.githubusercontent.com/sravyakganti/End-to-End-Data-BI-Pipeline/main/dashboard-screenshot.png" class="project-visual" alt="Pipeline Dashboard">
             </div>
             <br>
             <a href="https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline" class="btn">View Pipeline Code</a>
@@ -503,25 +528,24 @@
         <div class="project-card" style="border-color: #a78bfa;">
             <h3 class="project-title" style="color: #a78bfa;">6. Supply Chain Dimensional Modeling</h3>
             
-            <!-- TECH STACK BADGES -->
             <div style="margin-bottom: 20px;">
-                <img src="https://img.shields.io/badge/SQL-Advanced-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" height="28">
-                <img src="https://img.shields.io/badge/Kimball-Star_Schema-FF6F00?style=for-the-badge" height="28">
-                <img src="https://img.shields.io/badge/Data_Warehousing-000000?style=for-the-badge" height="28">
+                <img src="https://img.shields.io/badge/SQL-Advanced-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" height="28" alt="SQL">
+                <img src="https://img.shields.io/badge/Kimball-Star_Schema-FF6F00?style=for-the-badge" height="28" alt="Kimball Method">
+                <img src="https://img.shields.io/badge/Data_Warehousing-000000?style=for-the-badge" height="28" alt="Data Warehouse">
             </div>
 
             <div class="project-section">
-                <span class="label-challenge">🛑 The Challenge</span>
+                <span class="tag-challenge">🛑 The Challenge</span>
                 <p class="project-text">Analytical queries on raw 3NF transactional data were causing timeouts and reporting delays due to inefficient joins.</p>
             </div>
             
             <div class="project-section">
-                <span class="label-solution">⚡ The Solution</span>
+                <span class="tag-solution">⚡ The Solution</span>
                 <p class="project-text">Re-architected the data warehouse into a <b>Kimball Star Schema</b>. Optimized Fact and Dimension tables reduced query execution time by <b>60%</b>, enabling self-service analytics.</p>
             </div>
 
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/Supply-Chain-Data-Modeling/main/Data%20Modeling.png" class="project-visual">
+                <img src="https://raw.githubusercontent.com/sravyakganti/Supply-Chain-Data-Modeling/main/Data%20Modeling.png" class="project-visual" alt="ER Diagram">
             </div>
             <br>
             <a href="https://github.com/sravyakganti/Supply-Chain-Data-Modeling" class="btn-outline">View Data Model</a>
@@ -542,7 +566,7 @@
     <div style="text-align: center; padding: 100px 20px; background: #000000; border-top: 1px solid #30363d; margin-top: 50px;">
         <h2 style="color: #e2e8f0; font-weight: 300; font-size: 2.5rem;">Ready to build scalable data solutions?</h2>
         <a href="mailto:sravya.sravya1999@gmail.com">
-            <img src="https://img.shields.io/badge/SEND_ME_AN_EMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white&height=70">
+            <img src="https://img.shields.io/badge/SEND_ME_AN_EMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white&height=70" alt="Send Email">
         </a>
     </div>
 
