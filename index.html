@@ -383,106 +383,176 @@
             <a href="#p6" class="project-link">6. Star Schema</a>
         </div>
 
+        <!-- PROJECTS SECTION -->
+        <h2 id="projects" class="section-title">🚀 Featured Projects</h2>
+
         <!-- Project 1 -->
-        <div id="p1" class="project-card">
-            <h3 class="project-title">1. Real-Time Predictive Maintenance Engine (MLOps)</h3>
-            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px;"><b>STACK:</b> Python, XGBoost, FastAPI, Docker</p>
+        <div class="card">
+            <h3>1. Real-Time Predictive Maintenance Engine (MLOps)</h3>
             
-            <span class="tag-challenge">🛑 The Challenge</span>
-            <p class="project-desc">Industrial machines fail unexpectedly, costing millions in downtime. Traditional reactive maintenance is inefficient.</p>
+            <!-- TECH STACK BADGES -->
+            <div style="margin-bottom: 20px;">
+                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/XGBoost-EB4034?style=for-the-badge&logo=xgboost&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" height="28">
+            </div>
             
-            <span class="tag-solution">⚡ The Solution</span>
-            <p class="project-desc">Architected an End-to-End MLOps pipeline. Ingested live sensor streams to train an <b>XGBoost</b> regressor, deployed via a Dockerized <b>FastAPI</b> service to predict "Remaining Useful Life" (RUL) with <b>89% accuracy</b>.</p>
+            <div class="project-section">
+                <span class="label-challenge">🛑 The Challenge</span>
+                <p class="project-text">Industrial machines fail unexpectedly, costing millions in downtime. Traditional reactive maintenance is inefficient.</p>
+            </div>
+            
+            <div class="project-section">
+                <span class="label-solution">⚡ The Solution</span>
+                <p class="project-text">Architected an End-to-End MLOps pipeline. Ingested live sensor streams to train an <b>XGBoost</b> regressor, deployed via a Dockerized <b>FastAPI</b> service to predict "Remaining Useful Life" (RUL) with <b>89% accuracy</b>.</p>
+            </div>
 
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/predictive-maintenance-mlops/main/Animation.gif" class="project-visual">
+                <img src="https://raw.githubusercontent.com/sravyakganti/predictive-maintenance-mlops/main/Animation.gif" class="project-img">
             </div>
             <br>
             <a href="https://github.com/sravyakganti/predictive-maintenance-mlops" class="btn">View Code & Architecture</a>
         </div>
 
         <!-- Project 2 -->
-        <div id="p2" class="project-card" style="border-color: #a855f7;">
-            <h3 class="project-title" style="color: #a855f7;">2. The Corporate Brain: Private GenAI Chatbot</h3>
-            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px;"><b>STACK:</b> Llama 3, LangChain, ChromaDB, Streamlit</p>
+        <div class="card">
+            <h3 style="color: #a371f7;">2. The Corporate Brain: Private GenAI Chatbot</h3>
             
-            <span class="tag-challenge">🛑 The Challenge</span>
-            <p class="project-desc">Enterprises need to leverage proprietary knowledge locked in PDFs but cannot upload sensitive financial/HR data to public APIs like ChatGPT due to <b>data privacy regulations</b>.</p>
+            <!-- TECH STACK BADGES -->
+            <div style="margin-bottom: 20px;">
+                <img src="https://img.shields.io/badge/GenAI_Llama3-000000?style=for-the-badge&logo=meta&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/ChromaDB-475059?style=for-the-badge&logo=siemens&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" height="28">
+            </div>
             
-            <span class="tag-solution">⚡ The Solution</span>
-            <p class="project-desc">Engineered a <b>Privacy-First RAG Architecture</b>. Integrated <b>Llama 3 (Ollama)</b> with <b>ChromaDB</b> for local vector retrieval. The pipeline runs 100% offline with <b>zero data leakage</b>.</p>
+            <div class="project-section">
+                <span class="label-challenge">🛑 The Challenge</span>
+                <p class="project-text">Enterprises need to leverage proprietary knowledge locked in PDFs but cannot upload sensitive financial/HR data to public APIs like ChatGPT due to <b>data privacy regulations</b>.</p>
+            </div>
+            
+            <div class="project-section">
+                <span class="label-solution">⚡ The Solution</span>
+                <p class="project-text">Engineered a <b>Privacy-First RAG Architecture</b>. Integrated <b>Llama 3 (Ollama)</b> with <b>ChromaDB</b> for local vector retrieval. The pipeline runs 100% offline with <b>zero data leakage</b>.</p>
+            </div>
 
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/local-rag-document-assistant/main/chatbot_ui.png" class="project-visual">
+                <img src="https://raw.githubusercontent.com/sravyakganti/local-rag-document-assistant/main/chatbot_ui.png" class="project-img">
             </div>
             <br>
             <a href="https://github.com/sravyakganti/local-rag-document-assistant" class="btn-outline">View Project Code</a>
         </div>
 
         <!-- Project 3 -->
-        <div id="p3" class="project-card" style="border-color: #fb923c;">
-            <h3 class="project-title" style="color: #fb923c;">3. E-Commerce Retention & Cohort Analysis</h3>
-            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px;"><b>STACK:</b> Advanced SQL, DuckDB, Tableau</p>
+        <div class="card">
+            <h3 style="color: #f97316;">3. E-Commerce Retention & Cohort Analysis</h3>
             
-            <span class="tag-challenge">🛑 The Challenge</span>
-            <p class="project-desc">High Customer Acquisition Costs (CAC) make retention critical, yet the business lacked visibility into specific cohort drop-off points, leading to wasted marketing spend.</p>
+            <!-- TECH STACK BADGES -->
+            <div style="margin-bottom: 20px;">
+                <img src="https://img.shields.io/badge/SQL_Advanced-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black" height="28">
+                <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" height="28">
+            </div>
             
-            <span class="tag-solution">⚡ The Solution</span>
-            <p class="project-desc">Developed a reusable <b>SQL Pipeline</b> using complex Window Functions (CTEs) to normalize transaction data. Visualized a critical <b>15% retention drop</b> in Q1 using <b>Tableau LOD expressions</b>, driving targeted re-engagement strategies.</p>
+            <div class="project-section">
+                <span class="label-challenge">🛑 The Challenge</span>
+                <p class="project-text">High Customer Acquisition Costs (CAC) make retention critical, yet the business lacked visibility into specific cohort drop-off points, leading to wasted marketing spend.</p>
+            </div>
+            
+            <div class="project-section">
+                <span class="label-solution">⚡ The Solution</span>
+                <p class="project-text">Developed a reusable <b>SQL Pipeline</b> using complex Window Functions (CTEs) to normalize transaction data. Visualized a critical <b>15% retention drop</b> in Q1 using <b>Tableau LOD expressions</b>.</p>
+            </div>
 
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/ecommerce-retention-sql/main/E-commerce%20Customer%20tableau.png" class="project-visual">
+                <img src="https://raw.githubusercontent.com/sravyakganti/ecommerce-retention-sql/main/E-commerce%20Customer%20tableau.png" class="project-img">
             </div>
             <br>
             <a href="https://public.tableau.com/app/profile/sravya.kodavatiganti/viz/Ecommerce_Customer_Retention/E-CommerceCustomerRetentionCohorts?publish=yes" class="btn">Interactive Dashboard</a>
         </div>
 
         <!-- Project 4 -->
-        <div id="p4" class="project-card" style="border-color: #facc15;">
-            <h3 class="project-title" style="color: #facc15;">4. Telco Subscription Risk Dashboard</h3>
-            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px;"><b>STACK:</b> Power BI, DAX, Data Modeling</p>
+        <div class="card">
+            <h3 style="color: #eab308;">4. Telco Subscription Risk Dashboard</h3>
+            
+            <!-- TECH STACK BADGES -->
+            <div style="margin-bottom: 20px;">
+                <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" height="28">
+                <img src="https://img.shields.io/badge/DAX-Calculations-000000?style=for-the-badge&logo=powerbi" height="28">
+                <img src="https://img.shields.io/badge/Data_Modeling-333333?style=for-the-badge" height="28">
+            </div>
 
-            <span class="tag-challenge">🛑 The Challenge</span>
-            <p class="project-desc">A Telecom provider faced rising churn rates but lacked actionable insights into which specific demographics and contract types were high-risk.</p>
+            <div class="project-section">
+                <span class="label-challenge">🛑 The Challenge</span>
+                <p class="project-text">A Telecom provider faced rising churn rates but lacked actionable insights into which specific demographics and contract types were high-risk.</p>
+            </div>
+            
+            <div class="project-section">
+                <span class="label-solution">⚡ The Solution</span>
+                <p class="project-text">Designed an executive <b>Power BI Dashboard</b> utilizing complex <b>DAX measures</b> to dynamically model churn probability. Identified high-risk segments, enabling the retention team to prioritize intervention for at-risk revenue.</p>
+            </div>
 
-            <span class="tag-solution">⚡ The Solution</span>
-            <p class="project-desc">Designed an executive <b>Power BI Dashboard</b> utilizing complex <b>DAX measures</b> to dynamically model churn probability. Identified high-risk segments, enabling the retention team to prioritize intervention for at-risk revenue.</p>
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/Telco-Churn-Power-BI-/main/Executive%20Overview.png" class="project-visual">
+                <img src="https://raw.githubusercontent.com/sravyakganti/Telco-Churn-Power-BI-/main/Executive%20Overview.png" class="project-img">
             </div>
             <br>
             <a href="https://github.com/sravyakganti/Telco-Churn-Power-BI-" class="btn">View Power BI Files</a>
         </div>
 
         <!-- Project 5 -->
-        <div id="p5" class="project-card" style="border-color: #38bdf8;">
-            <h3 class="project-title" style="color: #38bdf8;">5. End-to-End Automated BI Pipeline</h3>
-            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px;"><b>STACK:</b> Snowflake, dbt, GitHub Actions</p>
+        <div class="card">
+            <h3 style="color: #38bdf8;">5. End-to-End Automated BI Pipeline</h3>
+            
+            <!-- TECH STACK BADGES -->
+            <div style="margin-bottom: 20px;">
+                <img src="https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" height="28">
+            </div>
 
-            <span class="tag-challenge">🛑 The Challenge</span>
-            <p class="project-desc">Manual CSV dumps resulted in stale data latency (24+ hours) and error-prone reporting, hindering real-time decision making.</p>
+            <div class="project-section">
+                <span class="label-challenge">🛑 The Challenge</span>
+                <p class="project-text">Manual CSV dumps resulted in stale data latency (24+ hours) and error-prone reporting, hindering real-time decision making.</p>
+            </div>
+            
+            <div class="project-section">
+                <span class="label-solution">⚡ The Solution</span>
+                <p class="project-text">Built a fully automated <b>Modern Data Stack</b> pipeline. Orchestrated data flow from API → <b>Snowflake</b> → Power BI using <b>dbt</b> for transformation and <b>GitHub Actions</b> for CI/CD, reducing reporting latency to near real-time.</p>
+            </div>
 
-            <span class="tag-solution">⚡ The Solution</span>
-            <p class="project-desc">Built a fully automated <b>Modern Data Stack</b> pipeline. Orchestrated data flow from API → <b>Snowflake</b> → Power BI using <b>dbt</b> for transformation and <b>GitHub Actions</b> for CI/CD, reducing reporting latency to near real-time.</p>
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/End-to-End-Data-BI-Pipeline/main/dashboard-screenshot.png" class="project-visual">
+                <img src="https://raw.githubusercontent.com/sravyakganti/End-to-End-Data-BI-Pipeline/main/dashboard-screenshot.png" class="project-img">
             </div>
             <br>
             <a href="https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline" class="btn">View Pipeline Code</a>
         </div>
 
         <!-- Project 6 -->
-        <div id="p6" class="project-card" style="border-color: #a78bfa;">
-            <h3 class="project-title" style="color: #a78bfa;">6. Supply Chain Dimensional Modeling</h3>
-            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px;"><b>STACK:</b> SQL, Data Warehousing, Kimball</p>
+        <div class="card">
+            <h3 style="color: #a78bfa;">6. Supply Chain Dimensional Modeling</h3>
+            
+            <!-- TECH STACK BADGES -->
+            <div style="margin-bottom: 20px;">
+                <img src="https://img.shields.io/badge/SQL-Advanced-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" height="28">
+                <img src="https://img.shields.io/badge/Kimball-Star_Schema-FF6F00?style=for-the-badge" height="28">
+                <img src="https://img.shields.io/badge/Data_Warehousing-000000?style=for-the-badge" height="28">
+            </div>
 
-            <span class="tag-challenge">🛑 The Challenge</span>
-            <p class="project-desc">Analytical queries on raw 3NF transactional data were causing timeouts and reporting delays due to inefficient joins.</p>
+            <div class="project-section">
+                <span class="label-challenge">🛑 The Challenge</span>
+                <p class="project-text">Analytical queries on raw 3NF transactional data were causing timeouts and reporting delays due to inefficient joins.</p>
+            </div>
+            
+            <div class="project-section">
+                <span class="label-solution">⚡ The Solution</span>
+                <p class="project-text">Re-architected the data warehouse into a <b>Kimball Star Schema</b>. Optimized Fact and Dimension tables reduced query execution time by <b>60%</b>, enabling self-service analytics.</p>
+            </div>
 
-            <span class="tag-solution">⚡ The Solution</span>
-            <p class="project-desc">Re-architected the data warehouse into a <b>Kimball Star Schema</b>. Optimized Fact and Dimension tables reduced query execution time by <b>60%</b>, enabling self-service analytics.</p>
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/Supply-Chain-Data-Modeling/main/Data%20Modeling.png" class="project-visual">
+                <img src="https://raw.githubusercontent.com/sravyakganti/Supply-Chain-Data-Modeling/main/Data%20Modeling.png" class="project-img">
             </div>
             <br>
             <a href="https://github.com/sravyakganti/Supply-Chain-Data-Modeling" class="btn-outline">View Data Model</a>
