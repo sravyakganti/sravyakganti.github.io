@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sravya Kodavatiganti | Data Portfolio</title>
+    <!-- Import Modern Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* --- GLOBAL STYLES --- */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117; /* GitHub Dark Dimmed */
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* --- ANIMATIONS --- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+
+        /* --- LAYOUT CONTAINERS --- */
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        
+        /* --- HEADER SECTION --- */
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: radial-gradient(circle at top, #161b22, #0d1117);
+            border-bottom: 1px solid #30363d;
+        }
+        
+        .profile-img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 4px solid #58a6ff;
+            box-shadow: 0 0 25px rgba(88, 166, 255, 0.2);
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 20px 0 10px;
+            background: linear-gradient(to right, #58a6ff, #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .role-title {
+            font-size: 1.3rem;
+            color: #8b949e;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-bar { margin-top: 20px; font-weight: 600; color: #c9d1d9; }
+
+        /* --- NAVIGATION --- */
+        .nav-bar {
+            position: sticky;
+            top: 20px;
+            background: rgba(22, 27, 34, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: -30px;
+            border: 1px solid #30363d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+        .nav-bar a { margin: 0 15px; color: #58a6ff; font-weight: 700; font-size: 1rem; text-transform: uppercase; }
+        .nav-bar a:hover { color: #ffffff; text-shadow: 0 0 10px #58a6ff; }
+
+        /* --- SECTION HEADERS --- */
+        .section-title {
+            font-size: 2rem;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            border-left: 5px solid #58a6ff;
+            padding-left: 15px;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        /* --- CARDS (Experience & Projects) --- */
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: #58a6ff;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 { margin: 0; color: #58a6ff; font-size: 1.5rem; }
+        .date-badge { background: #21262d; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; color: #8b949e; border: 1px solid #30363d; }
+
+        /* --- PROJECT TEXT STYLING (STAR METHOD) --- */
+        .project-section { margin-bottom: 15px; }
+        .label-challenge { color: #f87171; font-weight: 800; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+        .label-solution { color: #4ade80; font-weight: 800; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+        .project-text { color: #c9d1d9; font-size: 1rem; margin-top: 5px; margin-bottom: 20px; }
+
+        /* --- GRID FOR SKILLS --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .skill-box {
+            background: #0d1117;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #30363d;
+            text-align: center;
+        }
+        .skill-category { color: #a371f7; font-weight: 700; margin-bottom: 15px; display: block; font-size: 1.1rem;}
+
+        /* --- PROJECT IMAGES --- */
+        .project-img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            margin-top: 10px;
+            border: 1px solid #30363d;
+            transition: 0.3s;
+        }
+        .project-img:hover { border-color: #58a6ff; opacity: 0.9; }
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-block;
+            background: #238636;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-right: 10px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(240,246,252,0.1);
+        }
+        .btn:hover { background: #2ea043; }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #30363d;
+            color: #c9d1d9;
+        }
+        .btn-outline:hover { border-color: #8b949e; background: #21262d; }
+
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="fade-in">
+        <img src="Sravya passport Photo.jpg" alt="Profile" class="profile-img">
+        <h1>Sravya Kodavatiganti</h1>
+        <div class="role-title">
+            BI Engineer <span style="color:#30363d;">|</span> Data Engineer <span style="color:#30363d;">|</span> Data Scientist
+        </div>
+        
+        <p class="contact-bar">
+            📍 California, USA &nbsp;&nbsp;•&nbsp;&nbsp; 📞 +1 (201)-726-0636
+        </p>
+
+        <!-- UPDATED ABOUT ME SECTION -->
+        <div style="max-width: 800px; margin: 25px auto; text-align: left; background: rgba(30, 41, 59, 0.5); padding: 25px; border-radius: 12px; border-left: 4px solid #38bdf8;">
+            <p style="font-size: 1.1rem; color: #e2e8f0; margin-bottom: 15px;">
+                <b>I engineer the systems that turn raw data into profit.</b>
+            </p>
+            <p style="font-size: 1rem; color: #94a3b8; margin-bottom: 15px;">
+                With <b>4+ years of experience</b> in FinTech & Big Data (Northern Trust, Accenture), I specialize in de-risking business decisions through robust Data Engineering and automating intelligence with <b>GenAI</b>.
+            </p>
+            <p style="font-size: 1rem; color: #94a3b8; margin: 0;">
+                I don't just write code; I build systems that scale, self-heal, and drive measurable ROI—whether it's migrating petabytes to <b>Azure</b>, deploying <b>RAG architectures</b> to automate reporting, or designing dashboards that influence C-suite strategy.
+            </p>
+        </div>
+
+        <div style="margin-top: 25px;">
+            <a href="https://www.linkedin.com/in/sravya-kodavatiganti-5b99681b0/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" height="32"></a>
+            <a href="https://medium.com/@sravya.sravya1999" target="_blank"><img src="https://img.shields.io/badge/Medium-Read_Case_Studies-FFFFFF?style=for-the-badge&logo=medium&logoColor=black" height="32"></a>
+            <a href="mailto:sravya.sravya1999@gmail.com"><img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" height="32"></a>
+            <a href="resume.pdf" target="_blank"><img src="https://img.shields.io/badge/Resume-Download_PDF-FF5722?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" height="32"></a>
+        </div>
+    </header>
+
+    <div align="center">
+        <div class="nav-bar fade-in delay-1">
+            <a href="#experience">Experience</a>
+            <a href="#skills">Stack</a>
+            <a href="#projects">Projects</a>
+            <a href="#academic">Academic</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- EXPERIENCE SECTION -->
+        <h2 id="experience" class="section-title fade-in delay-1">💼 Professional Experience</h2>
+
+        <div class="card fade-in delay-2">
+            <div class="card-header">
+                <h3>Business Intelligence Engineer | Northern Trust</h3>
+                <span class="date-badge">JUN 2024 – PRESENT</span>
+            </div>
+            <ul>
+                <li style="margin-bottom: 10px;"><b>GenAI Implementation:</b> Architected an end-to-end <b>RAG Solution</b> automating financial reporting, cutting review time by <b>33%</b>.</li>
+                <li style="margin-bottom: 10px;"><b>Cloud Engineering:</b> Migrated critical pipelines to <b>Azure Data Factory</b>, slashing data ingestion latency by <b>42%</b>.</li>
+                <li style="margin-bottom: 10px;"><b>Fraud Detection:</b> Integrated anomaly detection models into BI workflows, reducing fraud review cycles by <b>20%</b>.</li>
+                <li style="margin-bottom: 10px;"><b>Governance:</b> Achieved <b>99.9% reporting accuracy</b> for regulatory submissions through automated Python frameworks.</li>
+            </ul>
+        </div>
+
+        <div class="card fade-in delay-2">
+            <div class="card-header">
+                <h3 style="color: #a371f7;">Data Engineer | Accenture</h3>
+                <span class="date-badge">AUG 2020 – AUG 2023</span>
+            </div>
+            <ul>
+                <li style="margin-bottom: 10px;"><b>Pipeline Architecture:</b> Built Python/SQL ETL pipelines consolidating data from <b>15+ siloed systems</b> into a unified warehouse.</li>
+                <li style="margin-bottom: 10px;"><b>Data Modeling:</b> Designed scalable <b>Kimball Star-Schema</b> models for credit risk reporting.</li>
+                <li style="margin-bottom: 10px;"><b>Optimization:</b> Optimized 100+ T-SQL procedures, reducing batch processing time by <b>64%</b>.</li>
+                <li style="margin-bottom: 10px;"><b>Automation:</b> Automated data validation scripts, saving the finance team <b>23+ hours per week</b>.</li>
+            </ul>
+        </div>
+
+        <!-- SKILLS SECTION -->
+        <h2 id="skills" class="section-title">🛠️ Technical Arsenal</h2>
+        <div class="skills-grid">
+            <div class="skill-box">
+                <span class="skill-category">☁️ Cloud & Big Data</span>
+                <img src="https://img.shields.io/badge/Azure-0078D4?logo=microsoft-azure&logoColor=white">
+                <img src="https://img.shields.io/badge/Synapse-0078D4?logo=microsoft-azure&logoColor=white">
+                <img src="https://img.shields.io/badge/Hadoop-66CCFF?logo=apachehadoop&logoColor=black">
+                <img src="https://img.shields.io/badge/Spark-E25A1C?logo=apachespark&logoColor=white">
+            </div>
+            <div class="skill-box">
+                <span class="skill-category">⚙️ Engineering</span>
+                <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white">
+                <img src="https://img.shields.io/badge/SQL-4479A1?logo=postgresql&logoColor=white">
+                <img src="https://img.shields.io/badge/Snowflake-29B5E8?logo=snowflake&logoColor=white">
+                <img src="https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white">
+            </div>
+            <div class="skill-box">
+                <span class="skill-category">🤖 Data Science</span>
+                <img src="https://img.shields.io/badge/GenAI-000000?logo=openai&logoColor=white">
+                <img src="https://img.shields.io/badge/XGBoost-EB4034?logo=xgboost&logoColor=white">
+                <img src="https://img.shields.io/badge/LangChain-1C3C3C?logo=chainlink&logoColor=white">
+                <img src="https://img.shields.io/badge/Llama3-000000?logo=meta&logoColor=white">
+            </div>
+            <div class="skill-box">
+                <span class="skill-category">📊 Analytics</span>
+                <img src="https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=black">
+                <img src="https://img.shields.io/badge/Tableau-E97627?logo=tableau&logoColor=white">
+                <img src="https://img.shields.io/badge/DuckDB-FFF000?logo=duckdb&logoColor=black">
+            </div>
+        </div>
+            
+            <!-- PROJECTS SECTION -->
+        <h2 id="projects" class="section-title">🚀 Featured Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="card">
+            <h3>1. Real-Time Predictive Maintenance Engine (MLOps)</h3>
+            <p style="color: #8b949e; font-size: 0.9rem;"><b>STACK:</b> Python, XGBoost, FastAPI, Docker</p>
+            
+            <div class="project-section">
+                <span class="label-challenge">🛑 The Challenge</span>
+                <p class="project-text">Unplanned equipment downtime costs industrial firms billions annually. Traditional reactive maintenance is inefficient, leading to lost revenue and safety risks.</p>
+            </div>
+            
+            <div class="project-section">
+                <span class="label-solution">⚡ The Solution</span>
+                <p class="project-text">Architected an End-to-End <b>MLOps pipeline</b>. Ingested live sensor streams to train an <b>XGBoost</b> regressor, deployed via a Dockerized <b>FastAPI</b> service to predict "Remaining Useful Life" (RUL) with <b>89% accuracy</b>, alerting operators 20 cycles before failure.</p>
+            </div>
+
+            <div align="center">
+                <img src="https://raw.githubusercontent.com/sravyakganti/predictive-maintenance-mlops/main/Animation.gif" class="project-img">
+            </div>
+            <br>
+            <a href="https://github.com/sravyakganti/predictive-maintenance-mlops" class="btn">View Code & Architecture</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card">
+            <h3 style="color: #a371f7;">2. The Corporate Brain: Private GenAI Chatbot</h3>
+            <p style="color: #8b949e; font-size: 0.9rem;"><b>STACK:</b> Llama 3, LangChain, ChromaDB, Streamlit</p>
+            
+            <div class="project-section">
+                <span class="label-challenge">🛑 The Challenge</span>
+                <p class="project-text">Enterprises need to leverage proprietary knowledge locked in PDFs but cannot upload sensitive financial/HR data to public APIs like ChatGPT due to <b>data privacy regulations</b>.</p>
+            </div>
+            
+            <div class="project-section">
+                <span class="label-solution">⚡ The Solution</span>
+                <p class="project-text">Engineered a <b>Privacy-First RAG Architecture</b>. Integrated <b>Llama 3 (Ollama)</b> with <b>ChromaDB</b> for local vector retrieval. The entire ingestion and inference pipeline runs 100% offline with <b>zero data leakage</b>.</p>
+            </div>
+
+            <div align="center">
+                <img src="https://raw.githubusercontent.com/sravyakganti/local-rag-document-assistant/main/chatbot_ui.png" class="project-img">
+            </div>
+            <br>
+            <a href="https://github.com/sravyakganti/local-rag-document-assistant" class="btn btn-outline">View Project Code</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card">
+            <h3 style="color: #f97316;">3. E-Commerce Retention & Cohort Analysis</h3>
+            <p style="color: #8b949e; font-size: 0.9rem;"><b>STACK:</b> Advanced SQL, DuckDB, Tableau</p>
+            
+            <div class="project-section">
+                <span class="label-challenge">🛑 The Challenge</span>
+                <p class="project-text">High Customer Acquisition Costs (CAC) make retention critical, yet the business lacked visibility into specific cohort drop-off points, leading to wasted marketing spend.</p>
+            </div>
+            
+            <div class="project-section">
+                <span class="label-solution">⚡ The Solution</span>
+                <p class="project-text">Developed a reusable <b>SQL Pipeline</b> using complex Window Functions (CTEs) to normalize transaction data. Visualized a critical <b>15% retention drop</b> in Q1 using <b>Tableau LOD expressions</b>, driving targeted re-engagement strategies.</p>
+            </div>
+
+            <div align="center">
+                <img src="https://raw.githubusercontent.com/sravyakganti/ecommerce-retention-sql/main/E-commerce%20Customer%20tableau.png" class="project-img">
+            </div>
+            <br>
+            <a href="YOUR_TABLEAU_PUBLIC_LINK_HERE" class="btn">Interactive Dashboard</a>
+            <a href="YOUR_MEDIUM_LINK_HERE" class="btn btn-outline">Read Case Study</a>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="card">
+            <h3 style="color: #eab308;">4. Telco Subscription Risk Dashboard</h3>
+            
+            <div class="project-section">
+                <span class="label-challenge">🛑 The Challenge</span>
+                <p class="project-text">A Telecom provider faced rising churn rates but lacked actionable insights into which specific demographics and contract types were high-risk.</p>
+            </div>
+            
+            <div class="project-section">
+                <span class="label-solution">⚡ The Solution</span>
+                <p class="project-text">Designed an executive <b>Power BI Dashboard</b> utilizing complex <b>DAX measures</b> to dynamically model churn probability. Identified high-risk segments, enabling the retention team to prioritize intervention for at-risk revenue.</p>
+            </div>
+
+            <div align="center">
+                <img src="https://raw.githubusercontent.com/sravyakganti/Telco-Churn-Power-BI-/main/Executive%20Overview.png" class="project-img">
+            </div>
+            <br>
+            <a href="https://github.com/sravyakganti/Telco-Churn-Power-BI-" class="btn">View Power BI Files</a>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="card">
+            <h3 style="color: #38bdf8;">5. End-to-End Automated BI Pipeline</h3>
+            
+            <div class="project-section">
+                <span class="label-challenge">🛑 The Challenge</span>
+                <p class="project-text">Manual CSV dumps resulted in stale data latency (24+ hours) and error-prone reporting, hindering real-time decision making.</p>
+            </div>
+            
+            <div class="project-section">
+                <span class="label-solution">⚡ The Solution</span>
+                <p class="project-text">Built a fully automated <b>Modern Data Stack</b> pipeline. Orchestrated data flow from API → <b>Snowflake</b> → Power BI using <b>dbt</b> for transformation and <b>GitHub Actions</b> for CI/CD, reducing reporting latency to near real-time.</p>
+            </div>
+
+            <div align="center">
+                <img src="https://raw.githubusercontent.com/sravyakganti/End-to-End-Data-BI-Pipeline/main/dashboard-screenshot.png" class="project-img">
+            </div>
+            <br>
+            <a href="https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline" class="btn">View Pipeline Code</a>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="card">
+            <h3 style="color: #a371f7;">6. Supply Chain Dimensional Modeling</h3>
+            
+            <div class="project-section">
+                <span class="label-challenge">🛑 The Challenge</span>
+                <p class="project-text">Analytical queries on raw 3NF transactional data were causing timeouts and reporting delays due to inefficient joins.</p>
+            </div>
+            
+            <div class="project-section">
+                <span class="label-solution">⚡ The Solution</span>
+                <p class="project-text">Re-architected the data warehouse into a <b>Kimball Star Schema</b>. Optimized Fact and Dimension tables reduced query execution time by <b>60%</b>, enabling self-service analytics.</p>
+            </div>
+
+            <div align="center">
+                <img src="https://raw.githubusercontent.com/sravyakganti/Supply-Chain-Data-Modeling/main/Data%20Modeling.png" class="project-img">
+            </div>
+            <br>
+            <a href="https://github.com/sravyakganti/Supply-Chain-Data-Modeling" class="btn btn-outline">View Data Model</a>
+        </div>
+
+        <!-- ACADEMIC SECTION -->
+        <h2 id="academic" class="section-title" style="border-color: #facc15;">🎓 Academic Highlights</h2>
+        <div class="card">
+            <ul style="font-size: 1.1rem; color: #c9d1d9;">
+                <li style="margin-bottom: 15px;"><b>Big Data Reporting & ETL Optimization:</b> Built MapReduce workflows using <b>Apache Oozie</b>, improving ETL data throughput by <b>45%</b> across 3 reporting pipelines.</li>
+                <li><b>GenAI-Ready Image & Data Processing:</b> Enabled remote diagnostics for <b>1,000+ users</b>, reducing in-person consultations by <b>35%</b> in 2 months.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div style="text-align: center; padding: 60px 20px; background: #0d1117; border-top: 1px solid #30363d; margin-top: 50px;">
+        <h2 style="color: #e2e8f0; font-weight: 300;">Ready to build scalable data solutions?</h2>
+        <a href="mailto:sravya.sravya1999@gmail.com">
+            <img src="https://img.shields.io/badge/SEND_ME_AN_EMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white&height=50">
+        </a>
+    </div>
+
+</body>
+</html>
