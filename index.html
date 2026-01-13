@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sravya Kodavatiganti | Data Portfolio</title>
-    <!-- Import 'Inter' Font (Standard for Silicon Valley Tech) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <style>
-        /* --- GLOBAL VARIABLES & RESET --- */
+        /* --- GLOBAL STYLES --- */
         :root {
             --bg-color: #0d1117;
             --card-bg: #161b22;
@@ -16,7 +15,8 @@
             --accent-blue: #38bdf8;
             --accent-purple: #a855f7;
             --accent-green: #2ea043;
-            --glow: 0 0 20px rgba(56, 189, 248, 0.15);
+            --accent-orange: #f97316;
+            --accent-yellow: #eab308;
         }
 
         body {
@@ -45,7 +45,7 @@
         /* --- LAYOUT --- */
         .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
 
-        /* --- 1. HERO HEADER (Massive & Bold) --- */
+        /* --- HEADER --- */
         header {
             text-align: center;
             padding: 120px 20px 80px;
@@ -64,7 +64,7 @@
         }
 
         h1 {
-            font-size: 5rem; /* HUGE NAME */
+            font-size: 5rem;
             margin: 0;
             background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);
             -webkit-background-clip: text;
@@ -89,7 +89,7 @@
             font-weight: 600;
         }
 
-        /* --- POWER BIO BOX (High Contrast) --- */
+        /* --- BIO BOX --- */
         .bio-box {
             background: rgba(30, 41, 59, 0.6);
             backdrop-filter: blur(10px);
@@ -104,18 +104,15 @@
         }
 
         .bio-text {
-            font-size: 1.4rem; /* INCREASED FONT SIZE */
+            font-size: 1.4rem;
             color: #ffffff;
             line-height: 1.8;
             font-weight: 300;
         }
 
-        .bio-highlight {
-            color: #38bdf8;
-            font-weight: 700;
-        }
+        .bio-highlight { color: #38bdf8; font-weight: 700; }
 
-        /* --- STICKY NAV BAR --- */
+        /* --- NAV BAR --- */
         .nav-bar {
             position: sticky;
             top: 20px;
@@ -129,14 +126,7 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.5);
             z-index: 999;
         }
-        .nav-bar a { 
-            margin: 0 25px; 
-            color: var(--accent-blue); 
-            font-weight: 800; 
-            font-size: 1.2rem; 
-            text-transform: uppercase; 
-            letter-spacing: 1px;
-        }
+        .nav-bar a { margin: 0 25px; color: var(--accent-blue); font-weight: 800; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; }
         .nav-bar a:hover { color: white; text-shadow: 0 0 15px var(--accent-blue); }
 
         /* --- SECTIONS --- */
@@ -150,13 +140,12 @@
             padding-left: 30px;
         }
 
-        /* --- SKILLS BENTO GRID (The "Standout" Part) --- */
-        .bento-grid {
+        /* --- SKILLS GRID --- */
+        .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Wider columns */
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             gap: 30px;
         }
-
         .bento-card {
             background: var(--card-bg);
             border: 1px solid #30363d;
@@ -164,29 +153,9 @@
             padding: 35px;
             transition: 0.3s;
         }
-
-        .bento-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-blue);
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.15);
-        }
-
-        .bento-title {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--accent-purple);
-            margin-bottom: 25px;
-            border-bottom: 2px solid #30363d;
-            padding-bottom: 15px;
-        }
-
-        /* --- BADGE STYLING --- */
-        .badge-container img {
-            margin: 6px;
-            height: 38px; /* BIGGER BADGES */
-            border-radius: 4px;
-            transition: 0.2s;
-        }
+        .bento-card:hover { transform: translateY(-5px); border-color: var(--accent-blue); box-shadow: 0 0 30px rgba(56, 189, 248, 0.15); }
+        .bento-title { font-size: 1.8rem; font-weight: 800; color: var(--accent-purple); margin-bottom: 25px; border-bottom: 2px solid #30363d; padding-bottom: 15px; }
+        .badge-container img { margin: 6px; height: 38px; border-radius: 4px; transition: 0.2s; }
         .badge-container img:hover { transform: scale(1.1); }
 
         /* --- JOB CARDS --- */
@@ -198,7 +167,6 @@
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
-        
         .job-title { font-size: 2rem; color: white; font-weight: 700; margin: 0; }
         .job-meta { font-size: 1.1rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 20px; text-transform: uppercase; }
 
@@ -208,21 +176,21 @@
             border: 1px solid #30363d;
             border-radius: 20px;
             padding: 40px;
-            margin-bottom: 50px;
+            margin-bottom: 60px; /* More space between projects */
         }
-        .project-title { font-size: 2.2rem; color: var(--accent-blue); font-weight: 800; }
+        .project-title { font-size: 2.2rem; color: var(--accent-blue); font-weight: 800; margin-top: 0; }
         
-        .tag-challenge { color: #f87171; font-weight: 900; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
-        .tag-solution { color: #4ade80; font-weight: 900; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .tag-challenge { color: #f87171; font-weight: 900; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 10px; }
+        .tag-solution { color: #4ade80; font-weight: 900; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-top: 25px; margin-bottom: 10px; }
         
-        .project-desc { font-size: 1.3rem; color: #cbd5e1; margin-top: 5px; margin-bottom: 25px; }
+        .project-desc { font-size: 1.3rem; color: #cbd5e1; margin-top: 0; margin-bottom: 15px; }
 
         .project-visual {
             width: 100%;
             max-width: 900px;
             border-radius: 12px;
             border: 2px solid #30363d;
-            margin-top: 20px;
+            margin-top: 30px;
             transition: 0.3s;
         }
         .project-visual:hover { border-color: var(--accent-blue); box-shadow: 0 0 30px rgba(56, 189, 248, 0.2); }
@@ -237,7 +205,7 @@
             font-size: 1.2rem;
             display: inline-block;
             margin-right: 15px;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         .btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(46, 160, 67, 0.4); }
 
@@ -250,7 +218,7 @@
             font-weight: 700;
             font-size: 1.2rem;
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         .btn-outline:hover { background: #30363d; color: white; }
 
@@ -260,7 +228,7 @@
 
     <!-- HERO HEADER -->
     <header class="fade-in">
-        <img src="Sravya Passport Photo .jpg" class="profile-img">
+        <img src="Sravya Passport Photo.jpg" class="profile-img">
         <h1>Sravya Kodavatiganti</h1>
         <div class="role-title">
             BI Engineer <span style="color:#38bdf8">|</span> Data Engineer <span style="color:#38bdf8">|</span> Data Scientist
@@ -269,7 +237,6 @@
             📍 California, USA &nbsp;&nbsp;•&nbsp;&nbsp; 📞 +1 (201) 726-0636
         </div>
 
-        <!-- POWER BIO BOX -->
         <div class="bio-box">
             <p class="bio-text">
                 <span class="bio-highlight">I engineer the systems that turn raw data into profit.</span><br><br>
@@ -277,7 +244,6 @@
             </p>
         </div>
 
-        <!-- SOCIAL LINKS (BIG) -->
         <div style="margin-top: 40px;">
             <a href="https://www.linkedin.com/in/sravya-kodavatiganti-5b99681b0/" target="_blank">
                 <img src="https://img.shields.io/badge/LINKEDIN-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" height="45">
@@ -336,10 +302,9 @@
             </ul>
         </div>
 
-        <!-- SKILLS (BENTO GRID STYLE - HUGE ICONS) -->
+        <!-- SKILLS BENTO GRID -->
         <h2 id="skills" class="section-header">🛠️ Technical Arsenal</h2>
         <div class="skills-grid">
-            
             <div class="bento-card">
                 <div class="bento-title">☁️ Cloud & Big Data</div>
                 <div class="badge-container">
@@ -351,7 +316,6 @@
                     <img src="https://img.shields.io/badge/Apache_Oozie-E25A1C?style=for-the-badge&logo=apache&logoColor=white">
                 </div>
             </div>
-
             <div class="bento-card">
                 <div class="bento-title" style="color: #38bdf8;">⚙️ Engineering</div>
                 <div class="badge-container">
@@ -363,7 +327,6 @@
                     <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white">
                 </div>
             </div>
-
             <div class="bento-card">
                 <div class="bento-title" style="color: #f43f5e;">🤖 Data Science</div>
                 <div class="badge-container">
@@ -374,7 +337,6 @@
                     <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white">
                 </div>
             </div>
-
             <div class="bento-card">
                 <div class="bento-title" style="color: #fbbf24;">📊 BI & Analytics</div>
                 <div class="badge-container">
@@ -384,7 +346,6 @@
                     <img src="https://img.shields.io/badge/DAX-000000?style=for-the-badge&logo=powerbi">
                 </div>
             </div>
-
         </div>
 
         <!-- PROJECTS -->
@@ -441,12 +402,18 @@
                 <img src="https://raw.githubusercontent.com/sravyakganti/ecommerce-retention-sql/main/E-commerce%20Customer%20tableau.png" class="project-visual">
             </div>
             <br>
-            <a href="https://public.tableau.com/app/profile/sravya.kodavatiganti/viz/Ecommerce_Customer_Retention/E-CommerceCustomerRetentionCohorts?publish=yes" class="btn">Interactive Dashboard</a>
+            <a href="YOUR_TABLEAU_PUBLIC_LINK_HERE" class="btn">Interactive Dashboard</a>
+            <a href="YOUR_MEDIUM_LINK_HERE" class="btn-outline">Read Case Study</a>
         </div>
 
         <!-- Project 4 -->
-        <div class="project-card">
+        <div class="project-card" style="border-color: #facc15;">
             <h3 class="project-title" style="color: #facc15;">4. Telco Subscription Risk Dashboard</h3>
+            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px;"><b>STACK:</b> Power BI, DAX, Data Modeling</p>
+
+            <span class="tag-challenge">🛑 The Challenge</span>
+            <p class="project-desc">A Telecom provider faced rising churn rates but lacked actionable insights into which specific demographics and contract types were high-risk.</p>
+
             <span class="tag-solution">⚡ The Solution</span>
             <p class="project-desc">Designed an executive <b>Power BI Dashboard</b> utilizing complex <b>DAX measures</b> to dynamically model churn probability. Identified high-risk segments, enabling the retention team to prioritize intervention.</p>
             <div align="center">
@@ -457,8 +424,13 @@
         </div>
 
         <!-- Project 5 -->
-        <div class="project-card">
+        <div class="project-card" style="border-color: #38bdf8;">
             <h3 class="project-title" style="color: #38bdf8;">5. End-to-End Automated BI Pipeline</h3>
+            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px;"><b>STACK:</b> Snowflake, dbt, GitHub Actions</p>
+
+            <span class="tag-challenge">🛑 The Challenge</span>
+            <p class="project-desc">Manual CSV dumps resulted in stale data latency (24+ hours) and error-prone reporting, hindering real-time decision making.</p>
+
             <span class="tag-solution">⚡ The Solution</span>
             <p class="project-desc">Built a fully automated <b>Modern Data Stack</b> pipeline. Orchestrated data flow from API → <b>Snowflake</b> → Power BI using <b>dbt</b> for transformation and <b>GitHub Actions</b> for CI/CD.</p>
             <div align="center">
@@ -469,8 +441,13 @@
         </div>
 
         <!-- Project 6 -->
-        <div class="project-card">
+        <div class="project-card" style="border-color: #a78bfa;">
             <h3 class="project-title" style="color: #a78bfa;">6. Supply Chain Dimensional Modeling</h3>
+            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px;"><b>STACK:</b> SQL, Data Warehousing, Kimball</p>
+
+            <span class="tag-challenge">🛑 The Challenge</span>
+            <p class="project-desc">Analytical queries on raw 3NF transactional data were causing timeouts and reporting delays due to inefficient joins.</p>
+
             <span class="tag-solution">⚡ The Solution</span>
             <p class="project-desc">Re-architected the data warehouse into a <b>Kimball Star Schema</b>. Optimized Fact and Dimension tables reduced query execution time by <b>60%</b>.</p>
             <div align="center">
@@ -480,13 +457,26 @@
             <a href="https://github.com/sravyakganti/Supply-Chain-Data-Modeling" class="btn-outline">View Data Model</a>
         </div>
 
-        <!-- ACADEMIC -->
-        <h2 id="academic" class="section-header" style="border-color: #facc15;">🎓 Academic Highlights</h2>
+        <!-- ACADEMIC SECTION -->
+        <h2 id="academic" class="section-header" style="border-left-color: #facc15;">🎓 Academic Highlights</h2>
         <div class="project-card">
-            <ul style="font-size: 1.3rem; color: #c9d1d9;">
-                <li style="margin-bottom: 25px;"><b>Big Data Reporting & ETL Optimization:</b> Built MapReduce workflows using <b>Apache Oozie</b>, improving ETL data throughput by <b>45%</b> across 3 reporting pipelines.</li>
-                <li><b>GenAI-Ready Image & Data Processing:</b> Enabled remote diagnostics for <b>1,000+ users</b>, reducing in-person consultations by <b>35%</b> in 2 months.</li>
-            </ul>
+            <div class="project-section">
+                <h3 style="color: #facc15;">Big Data Reporting & ETL Optimization</h3>
+                <span class="tag-challenge">🛑 The Challenge</span>
+                <p class="project-desc">Legacy ETL processes were too slow to handle growing data volumes, causing reporting delays.</p>
+                <span class="tag-solution">⚡ The Solution</span>
+                <p class="project-desc">Built MapReduce workflows using <b>Apache Oozie</b>, improving ETL data throughput by <b>45%</b> across 3 reporting pipelines.</p>
+            </div>
+            
+            <hr style="border-color: #30363d; margin: 30px 0;">
+
+            <div class="project-section">
+                <h3 style="color: #facc15;">GenAI-Ready Image & Data Processing</h3>
+                <span class="tag-challenge">🛑 The Challenge</span>
+                <p class="project-desc">Remote diagnostics were inefficient due to poor image processing pipelines.</p>
+                <span class="tag-solution">⚡ The Solution</span>
+                <p class="project-desc">Enabled remote diagnostics for <b>1,000+ users</b>, reducing in-person consultations by <b>35%</b> in 2 months.</p>
+            </div>
         </div>
 
     </div>
