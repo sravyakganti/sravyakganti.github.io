@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sravya Kodavatiganti | Data Portfolio</title>
-    <!-- Import Modern Google Fonts: Inter (The standard for high-end tech sites) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Import 'Inter' Font (Standard for Silicon Valley Tech) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <style>
-        /* --- GLOBAL STYLES (BIGGER & BOLDER) --- */
+        /* --- GLOBAL VARIABLES & RESET --- */
         :root {
             --bg-color: #0d1117;
             --card-bg: #161b22;
             --text-main: #e6edf3;
             --text-muted: #8b949e;
-            --accent: #58a6ff;
-            --accent-glow: rgba(88, 166, 255, 0.4);
+            --accent-blue: #38bdf8;
+            --accent-purple: #a855f7;
+            --accent-green: #2ea043;
+            --glow: 0 0 20px rgba(56, 189, 248, 0.15);
         }
 
         body {
@@ -23,48 +25,48 @@
             padding: 0;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.7; /* More breathing room */
-            font-size: 20px; /* INCREASED BASE FONT SIZE */
+            line-height: 1.7;
+            font-size: 18px;
         }
 
         a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { padding-left: 25px; }
-        li { margin-bottom: 12px; } /* Space out bullet points */
-        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; font-weight: 300; color: #d1d5db; }
+
         /* --- ANIMATIONS --- */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         .fade-in { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
         .delay-1 { animation-delay: 0.2s; }
         .delay-2 { animation-delay: 0.4s; }
 
-        /* --- LAYOUT CONTAINERS --- */
-        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-        
-        /* --- HEADER SECTION --- */
+        /* --- LAYOUT --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+        /* --- 1. HERO HEADER (Massive & Bold) --- */
         header {
             text-align: center;
-            padding: 100px 20px;
-            background: radial-gradient(circle at top, #1c2533, #0d1117);
+            padding: 120px 20px 80px;
+            background: radial-gradient(circle at 50% 0%, #1e293b 0%, #0d1117 70%);
             border-bottom: 1px solid #30363d;
         }
-        
+
         .profile-img {
-            width: 200px; /* Bigger Photo */
-            height: 200px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
-            border: 5px solid var(--accent);
-            box-shadow: 0 0 40px var(--accent-glow);
+            border: 6px solid var(--accent-blue);
+            box-shadow: 0 0 50px rgba(56, 189, 248, 0.4);
             object-fit: cover;
+            margin-bottom: 30px;
         }
 
         h1 {
-            font-size: 4.5rem; /* MASSIVE NAME */
-            margin: 25px 0 15px;
-            background: linear-gradient(to right, #58a6ff, #a371f7);
+            font-size: 5rem; /* HUGE NAME */
+            margin: 0;
+            background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
@@ -73,194 +75,222 @@
         }
 
         .role-title {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             color: var(--text-muted);
             font-weight: 400;
-            letter-spacing: 0.5px;
-            margin-bottom: 20px;
+            margin-top: 15px;
+            letter-spacing: 1px;
         }
 
-        .contact-bar { 
-            margin-top: 25px; 
-            font-weight: 600; 
-            color: var(--text-main); 
-            font-size: 1.2rem;
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* --- POWER BIO BOX (High Contrast) --- */
+        .bio-box {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid #38bdf8;
+            border-left: 8px solid #38bdf8;
+            padding: 40px;
+            margin: 50px auto;
+            max-width: 900px;
+            border-radius: 16px;
+            text-align: left;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
 
         .bio-text {
-            max-width: 800px; 
-            margin: 30px auto; 
-            font-size: 1.3rem; /* Bigger Bio */
-            color: #c9d1d9;
+            font-size: 1.4rem; /* INCREASED FONT SIZE */
+            color: #ffffff;
+            line-height: 1.8;
             font-weight: 300;
         }
 
-        /* --- NAVIGATION --- */
+        .bio-highlight {
+            color: #38bdf8;
+            font-weight: 700;
+        }
+
+        /* --- STICKY NAV BAR --- */
         .nav-bar {
             position: sticky;
             top: 20px;
-            background: rgba(22, 27, 34, 0.95);
+            background: rgba(13, 17, 23, 0.9);
             backdrop-filter: blur(15px);
             padding: 15px 40px;
             border-radius: 100px;
             display: inline-block;
             margin-top: -40px;
             border: 1px solid #30363d;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-            z-index: 1000;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            z-index: 999;
         }
         .nav-bar a { 
-            margin: 0 20px; 
-            color: var(--accent); 
-            font-weight: 700; 
-            font-size: 1.1rem; 
+            margin: 0 25px; 
+            color: var(--accent-blue); 
+            font-weight: 800; 
+            font-size: 1.2rem; 
             text-transform: uppercase; 
             letter-spacing: 1px;
         }
-        .nav-bar a:hover { color: #ffffff; text-shadow: 0 0 15px var(--accent); }
+        .nav-bar a:hover { color: white; text-shadow: 0 0 15px var(--accent-blue); }
 
-        /* --- SECTION HEADERS --- */
-        .section-title {
-            font-size: 2.8rem; /* Bigger Section Headers */
-            margin-top: 80px;
-            margin-bottom: 40px;
-            border-left: 8px solid var(--accent);
-            padding-left: 20px;
-            color: #ffffff;
+        /* --- SECTIONS --- */
+        .section-header {
+            font-size: 3rem;
             font-weight: 800;
+            color: white;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            border-left: 10px solid var(--accent-blue);
+            padding-left: 30px;
         }
 
-        /* --- CARDS (Experience & Projects) --- */
-        .card {
+        /* --- SKILLS BENTO GRID (The "Standout" Part) --- */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Wider columns */
+            gap: 30px;
+        }
+
+        .bento-card {
             background: var(--card-bg);
             border: 1px solid #30363d;
-            border-radius: 16px;
-            padding: 40px; /* More padding */
-            margin-bottom: 40px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-            border-color: var(--accent);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #30363d;
-            padding-bottom: 20px;
-            margin-bottom: 25px;
-        }
-
-        .card h3 { margin: 0; color: var(--accent); font-size: 1.8rem; font-weight: 700; }
-        
-        .date-badge { 
-            background: #21262d; 
-            padding: 8px 16px; 
-            border-radius: 50px; 
-            font-size: 1rem; 
-            color: var(--text-muted); 
-            border: 1px solid #30363d; 
-            font-weight: 600;
-        }
-
-        /* --- PROJECT TEXT STYLING (STAR METHOD) --- */
-        .project-section { margin-bottom: 20px; }
-        .label-challenge { color: #f87171; font-weight: 900; text-transform: uppercase; font-size: 1rem; letter-spacing: 1.5px; }
-        .label-solution { color: #4ade80; font-weight: 900; text-transform: uppercase; font-size: 1rem; letter-spacing: 1.5px; }
-        .project-text { color: #e6edf3; font-size: 1.2rem; margin-top: 8px; margin-bottom: 25px; }
-
-        /* --- GRID FOR SKILLS --- */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        .skill-box {
-            background: #0d1117;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #30363d;
-            text-align: center;
-        }
-        .skill-category { color: #a371f7; font-weight: 800; margin-bottom: 20px; display: block; font-size: 1.4rem;}
-
-        /* --- PROJECT IMAGES --- */
-        .project-img {
-            width: 100%;
-            max-width: 900px;
-            border-radius: 10px;
-            margin-top: 15px;
-            border: 2px solid #30363d;
+            border-radius: 20px;
+            padding: 35px;
             transition: 0.3s;
         }
-        .project-img:hover { border-color: var(--accent); opacity: 1; }
+
+        .bento-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.15);
+        }
+
+        .bento-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent-purple);
+            margin-bottom: 25px;
+            border-bottom: 2px solid #30363d;
+            padding-bottom: 15px;
+        }
+
+        /* --- BADGE STYLING --- */
+        .badge-container img {
+            margin: 6px;
+            height: 38px; /* BIGGER BADGES */
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+        .badge-container img:hover { transform: scale(1.1); }
+
+        /* --- JOB CARDS --- */
+        .job-card {
+            background: var(--card-bg);
+            border-left: 6px solid var(--accent-blue);
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .job-title { font-size: 2rem; color: white; font-weight: 700; margin: 0; }
+        .job-meta { font-size: 1.1rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 20px; text-transform: uppercase; }
+
+        /* --- PROJECT CARDS --- */
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid #30363d;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+        }
+        .project-title { font-size: 2.2rem; color: var(--accent-blue); font-weight: 800; }
+        
+        .tag-challenge { color: #f87171; font-weight: 900; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .tag-solution { color: #4ade80; font-weight: 900; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .project-desc { font-size: 1.3rem; color: #cbd5e1; margin-top: 5px; margin-bottom: 25px; }
+
+        .project-visual {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 12px;
+            border: 2px solid #30363d;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .project-visual:hover { border-color: var(--accent-blue); box-shadow: 0 0 30px rgba(56, 189, 248, 0.2); }
 
         /* --- BUTTONS --- */
         .btn {
-            display: inline-block;
-            background: #238636;
-            color: #ffffff;
-            padding: 14px 28px;
+            background: var(--accent-green);
+            color: white;
+            padding: 15px 30px;
             border-radius: 8px;
             font-weight: 700;
+            font-size: 1.2rem;
+            display: inline-block;
             margin-right: 15px;
             margin-top: 20px;
-            font-size: 1.1rem;
-            border: 1px solid rgba(240,246,252,0.1);
         }
-        .btn:hover { background: #2ea043; transform: scale(1.05); }
-        
+        .btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(46, 160, 67, 0.4); }
+
         .btn-outline {
             background: transparent;
             border: 2px solid #30363d;
-            color: #c9d1d9;
-            padding: 14px 28px;
+            color: #e2e8f0;
+            padding: 15px 30px;
             border-radius: 8px;
             font-weight: 700;
+            font-size: 1.2rem;
+            display: inline-block;
             margin-top: 20px;
-            font-size: 1.1rem;
         }
-        .btn-outline:hover { border-color: #8b949e; background: #21262d; color: white; }
+        .btn-outline:hover { background: #30363d; color: white; }
 
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
+    <!-- HERO HEADER -->
     <header class="fade-in">
-        <img src="Sravya Passport Photo.jpg" alt="Profile" class="profile-img">
+        <img src="Sravya Passport Photo .jpg" class="profile-img">
         <h1>Sravya Kodavatiganti</h1>
         <div class="role-title">
-            BI Engineer <span style="color:#38bdf8">•</span> Data Engineer <span style="color:#38bdf8">•</span> Data Scientist
+            BI Engineer <span style="color:#38bdf8">|</span> Data Engineer <span style="color:#38bdf8">|</span> Data Scientist
         </div>
-        <p style="max-width: 800px; margin: 25px auto; font-size: 1.25rem; color: #cbd5e1; font-weight: 300;">
-            Bridging the gap between <b>Complex Data</b> and <b>Business Strategy</b>.<br>
-            I build <b>Scalable Cloud Pipelines</b>, deploy <b>Secure GenAI Models</b>, and design <b>Dashboards</b> that drive measurable ROI.
-        </p>
-        
-        <p class="contact-bar">
-            📍 California, USA &nbsp;|&nbsp; 📞 +1 (201) 726-0636
-        </p>
+        <div class="contact-info">
+            📍 California, USA &nbsp;&nbsp;•&nbsp;&nbsp; 📞 +1 (201) 726-0636
+        </div>
 
-        <!-- BIO-->
-        <div style="background-color: rgba(30, 41, 59, 0.6); padding: 30px; border-radius: 12px; border-left: 5px solid #38bdf8; margin: 35px auto; max-width: 850px; text-align: left; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-            <p style="font-size: 1.2rem; color: #e2e8f0; margin-bottom: 15px; line-height: 1.6;">
-                <b>I engineer the systems that turn raw data into operational value.</b>
-            </p>
-            <p style="font-size: 1.05rem; color: #94a3b8; margin: 0; line-height: 1.8;">
-                With <b>4+ years of experience</b> in high-scale, regulated environments (FinTech & Enterprise), I specialize in de-risking business decisions through robust <b>Data Engineering</b> and automating workflows with <b>GenAI</b>. Whether predicting equipment failure (IoT), optimizing supply chains, or ensuring data privacy, I build systems that <b>scale</b>, <b>self-heal</b>, and deliver <b>measurable business impact</b>.
+        <!-- POWER BIO BOX -->
+        <div class="bio-box">
+            <p class="bio-text">
+                <span class="bio-highlight">I engineer the systems that turn raw data into profit.</span><br><br>
+                With <b>4+ years</b> of experience in high-scale, regulated environments (FinTech & Enterprise), I specialize in de-risking business decisions through robust <b>Data Engineering</b> and automating workflows with <b>GenAI</b>. I don't just write code; I build systems that <b>scale</b>, <b>self-heal</b>, and deliver measurable <b>ROI</b>.
             </p>
         </div>
 
-        <div style="margin-top: 35px;">
-            <a href="https://www.linkedin.com/in/sravya-kodavatiganti-5b99681b0/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" height="45"></a>
-            <a href="https://medium.com/@sravya.sravya1999" target="_blank"><img src="https://img.shields.io/badge/Medium-Read_Case_Studies-FFFFFF?style=for-the-badge&logo=medium&logoColor=black" height="45"></a>
-            <a href="mailto:sravya.sravya1999@gmail.com"><img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" height="45"></a>
-            <a href="resume.pdf" target="_blank"><img src="https://img.shields.io/badge/Resume-Download_PDF-FF5722?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" height="45"></a>
+        <!-- SOCIAL LINKS (BIG) -->
+        <div style="margin-top: 40px;">
+            <a href="https://www.linkedin.com/in/sravya-kodavatiganti-5b99681b0/" target="_blank">
+                <img src="https://img.shields.io/badge/LINKEDIN-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" height="45">
+            </a>
+            <a href="https://medium.com/@sravya.sravya1999" target="_blank">
+                <img src="https://img.shields.io/badge/MEDIUM-Read_Case_Studies-FFFFFF?style=for-the-badge&logo=medium&logoColor=black" height="45">
+            </a>
+            <a href="mailto:sravya.sravya1999@gmail.com">
+                <img src="https://img.shields.io/badge/EMAIL-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" height="45">
+            </a>
+            <a href="resume.pdf" target="_blank">
+                <img src="https://img.shields.io/badge/RESUME-Download_PDF-FF5722?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" height="45">
+            </a>
         </div>
     </header>
 
@@ -275,203 +305,186 @@
 
     <div class="container">
 
-        <!-- EXPERIENCE SECTION -->
-        <h2 id="experience" class="section-title fade-in delay-1">💼 Professional Experience</h2>
+        <!-- EXPERIENCE -->
+        <h2 id="experience" class="section-header fade-in delay-1">💼 Professional Experience</h2>
 
-        <div class="card fade-in delay-2">
-            <div class="card-header">
-                <h3>Business Intelligence Engineer | Northern Trust</h3>
-                <span class="date-badge">JUN 2024 – PRESENT</span>
+        <div class="job-card fade-in delay-2">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 class="job-title">Business Intelligence Engineer | Northern Trust</h3>
+                <span class="job-meta">JUN 2024 – PRESENT</span>
             </div>
-            <ul>
-                <li><b>GenAI Implementation:</b> Architected an end-to-end <b>RAG Solution</b> automating financial reporting, cutting review time by <b>33%</b>.</li>
+            <p style="color: #94a3b8; font-style: italic; margin-bottom: 20px;">FinTech | USA</p>
+            <ul style="font-size: 1.2rem; color: #e2e8f0;">
+                <li><b>GenAI Strategy:</b> Architected an end-to-end <b>RAG Solution</b> automating financial reporting, cutting review time by <b>33%</b>.</li>
                 <li><b>Cloud Engineering:</b> Migrated critical pipelines to <b>Azure Data Factory</b>, slashing data ingestion latency by <b>42%</b>.</li>
                 <li><b>Fraud Detection:</b> Integrated anomaly detection models into BI workflows, reducing fraud review cycles by <b>20%</b>.</li>
-                <li><b>Governance:</b> Achieved <b>99.9% reporting accuracy</b> for regulatory submissions through automated Python frameworks.</li>
+                <li><b>Governance:</b> Achieved <b>99.9% reporting accuracy</b> for regulatory submissions via automated Python testing.</li>
             </ul>
         </div>
 
-        <div class="card fade-in delay-2">
-            <div class="card-header">
-                <h3 style="color: #a78bfa;">Data Engineer | Accenture</h3>
-                <span class="date-badge">AUG 2020 – AUG 2023</span>
+        <div class="job-card fade-in delay-2" style="border-left-color: #a855f7;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 class="job-title" style="color: #a855f7;">Data Engineer | Accenture</h3>
+                <span class="job-meta" style="color: #a855f7;">AUG 2020 – AUG 2023</span>
             </div>
-            <ul>
-                <li><b>Pipeline Architecture:</b> Built Python/SQL ETL pipelines consolidating data from <b>15+ siloed systems</b> into a unified warehouse.</li>
+            <p style="color: #94a3b8; font-style: italic; margin-bottom: 20px;">Banking Client | India</p>
+            <ul style="font-size: 1.2rem; color: #e2e8f0;">
+                <li><b>Pipeline Architecture:</b> Built Python/SQL ETL pipelines consolidating data from <b>15+ siloed systems</b>.</li>
                 <li><b>Data Modeling:</b> Designed scalable <b>Kimball Star-Schema</b> models for credit risk reporting.</li>
                 <li><b>Optimization:</b> Optimized 100+ T-SQL procedures, reducing batch processing time by <b>64%</b>.</li>
                 <li><b>Automation:</b> Automated data validation scripts, saving the finance team <b>23+ hours per week</b>.</li>
             </ul>
         </div>
 
-        <!-- SKILLS SECTION -->
-        <h2 id="skills" class="section-title">🛠️ Technical Arsenal</h2>
+        <!-- SKILLS (BENTO GRID STYLE - HUGE ICONS) -->
+        <h2 id="skills" class="section-header">🛠️ Technical Arsenal</h2>
         <div class="skills-grid">
-            <div class="skill-box">
-                <span class="skill-category">☁️ Cloud & Big Data</span>
-                <img src="https://img.shields.io/badge/Azure-0078D4?logo=microsoft-azure&logoColor=white&style=for-the-badge&logoWidth=30">
-                <img src="https://img.shields.io/badge/Synapse-0078D4?logo=microsoft-azure&logoColor=white&style=for-the-badge&logoWidth=30">
-                <img src="https://img.shields.io/badge/Hadoop-66CCFF?logo=apachehadoop&logoColor=black&style=for-the-badge&logoWidth=30">
-                <img src="https://img.shields.io/badge/Spark-E25A1C?logo=apachespark&logoColor=white&style=for-the-badge&logoWidth=30">
+            
+            <div class="bento-card">
+                <div class="bento-title">☁️ Cloud & Big Data</div>
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white">
+                    <img src="https://img.shields.io/badge/Synapse-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white">
+                    <img src="https://img.shields.io/badge/Data_Factory-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white">
+                    <img src="https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black">
+                    <img src="https://img.shields.io/badge/Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white">
+                    <img src="https://img.shields.io/badge/Apache_Oozie-E25A1C?style=for-the-badge&logo=apache&logoColor=white">
+                </div>
             </div>
-            <div class="skill-box">
-                <span class="skill-category">⚙️ Engineering</span>
-                <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge&logoWidth=30">
-                <img src="https://img.shields.io/badge/SQL-4479A1?logo=postgresql&logoColor=white&style=for-the-badge&logoWidth=30">
-                <img src="https://img.shields.io/badge/Snowflake-29B5E8?logo=snowflake&logoColor=white&style=for-the-badge&logoWidth=30">
-                <img src="https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white&style=for-the-badge&logoWidth=30">
+
+            <div class="bento-card">
+                <div class="bento-title" style="color: #38bdf8;">⚙️ Engineering</div>
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+                    <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white">
+                    <img src="https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white">
+                    <img src="https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white">
+                    <img src="https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white">
+                    <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white">
+                </div>
             </div>
-            <div class="skill-box">
-                <span class="skill-category">🤖 Data Science</span>
-                <img src="https://img.shields.io/badge/GenAI-000000?logo=openai&logoColor=white&style=for-the-badge&logoWidth=30">
-                <img src="https://img.shields.io/badge/XGBoost-EB4034?logo=xgboost&logoColor=white&style=for-the-badge&logoWidth=30">
-                <img src="https://img.shields.io/badge/LangChain-1C3C3C?logo=chainlink&logoColor=white&style=for-the-badge&logoWidth=30">
+
+            <div class="bento-card">
+                <div class="bento-title" style="color: #f43f5e;">🤖 Data Science</div>
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/GenAI_/_LLM-000000?style=for-the-badge&logo=openai&logoColor=white">
+                    <img src="https://img.shields.io/badge/XGBoost-EB4034?style=for-the-badge&logo=xgboost&logoColor=white">
+                    <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white">
+                    <img src="https://img.shields.io/badge/Ollama-Llama3-000000?style=for-the-badge&logo=meta&logoColor=white">
+                    <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white">
+                </div>
             </div>
-            <div class="skill-box">
-                <span class="skill-category">📊 Analytics</span>
-                <img src="https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=black&style=for-the-badge&logoWidth=30">
-                <img src="https://img.shields.io/badge/Tableau-E97627?logo=tableau&logoColor=white&style=for-the-badge&logoWidth=30">
-                <img src="https://img.shields.io/badge/DuckDB-FFF000?logo=duckdb&logoColor=black&style=for-the-badge&logoWidth=30">
+
+            <div class="bento-card">
+                <div class="bento-title" style="color: #fbbf24;">📊 BI & Analytics</div>
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black">
+                    <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white">
+                    <img src="https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black">
+                    <img src="https://img.shields.io/badge/DAX-000000?style=for-the-badge&logo=powerbi">
+                </div>
             </div>
+
         </div>
 
-        <!-- PROJECTS SECTION -->
-        <h2 id="projects" class="section-title">🚀 Featured Projects</h2>
+        <!-- PROJECTS -->
+        <h2 id="projects" class="section-header">🚀 Featured Projects</h2>
 
         <!-- Project 1 -->
-        <div class="card">
-            <h3>1. Real-Time Predictive Maintenance Engine (MLOps)</h3>
-            <p style="color: #94a3b8; font-size: 1rem;"><b>STACK:</b> Python, XGBoost, FastAPI, Docker</p>
+        <div class="project-card">
+            <h3 class="project-title">1. Real-Time Predictive Maintenance Engine (MLOps)</h3>
+            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px;"><b>STACK:</b> Python, XGBoost, FastAPI, Docker</p>
             
-            <div class="project-section">
-                <span class="label-challenge">🛑 The Challenge</span>
-                <p class="project-text">Industrial machines fail unexpectedly, costing millions in downtime. Traditional reactive maintenance is inefficient, leading to operational inefficiency.</p>
-            </div>
+            <span class="tag-challenge">🛑 The Challenge</span>
+            <p class="project-desc">Industrial machines fail unexpectedly, costing millions in downtime. Traditional reactive maintenance is inefficient.</p>
             
-            <div class="project-section">
-                <span class="label-solution">⚡ The Solution</span>
-                <p class="project-text">Architected an End-to-End <b>MLOps pipeline</b>. Ingested live sensor streams to train an <b>XGBoost</b> regressor, deployed via a Dockerized <b>FastAPI</b> service to predict "Remaining Useful Life" (RUL) with <b>89% accuracy</b>, alerting operators 20 cycles before failure.</p>
-            </div>
+            <span class="tag-solution">⚡ The Solution</span>
+            <p class="project-desc">Architected an End-to-End MLOps pipeline. Ingested live sensor streams to train an <b>XGBoost</b> regressor, deployed via a Dockerized <b>FastAPI</b> service to predict "Remaining Useful Life" (RUL) with <b>89% accuracy</b>.</p>
 
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/predictive-maintenance-mlops/main/Animation.gif" class="project-img">
+                <img src="https://raw.githubusercontent.com/sravyakganti/predictive-maintenance-mlops/main/Animation.gif" class="project-visual">
             </div>
             <br>
             <a href="https://github.com/sravyakganti/predictive-maintenance-mlops" class="btn">View Code & Architecture</a>
         </div>
 
         <!-- Project 2 -->
-        <div class="card">
-            <h3 style="color: #a78bfa;">2. The Corporate Brain: Private GenAI Chatbot</h3>
-            <p style="color: #94a3b8; font-size: 1rem;"><b>STACK:</b> Llama 3, LangChain, ChromaDB, Streamlit</p>
+        <div class="project-card" style="border-color: #a855f7;">
+            <h3 class="project-title" style="color: #a855f7;">2. The Corporate Brain: Private GenAI Chatbot</h3>
+            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px;"><b>STACK:</b> Llama 3, LangChain, ChromaDB, Streamlit</p>
             
-            <div class="project-section">
-                <span class="label-challenge">🛑 The Challenge</span>
-                <p class="project-text">Enterprises need to leverage proprietary knowledge locked in PDFs but cannot upload sensitive financial/HR data to public APIs like ChatGPT due to <b>data privacy regulations</b>.</p>
-            </div>
+            <span class="tag-challenge">🛑 The Challenge</span>
+            <p class="project-desc">Enterprises need to leverage proprietary knowledge locked in PDFs but cannot upload sensitive financial/HR data to public APIs like ChatGPT.</p>
             
-            <div class="project-section">
-                <span class="label-solution">⚡ The Solution</span>
-                <p class="project-text">Engineered a <b>Privacy-First RAG Architecture</b>. Integrated <b>Llama 3 (Ollama)</b> with <b>ChromaDB</b> for local vector retrieval. The entire ingestion and inference pipeline runs 100% offline with <b>zero data leakage</b>.</p>
-            </div>
+            <span class="tag-solution">⚡ The Solution</span>
+            <p class="project-desc">Engineered a <b>Privacy-First RAG Architecture</b>. Integrated <b>Llama 3 (Ollama)</b> with <b>ChromaDB</b> for local vector retrieval. The pipeline runs 100% offline with <b>zero data leakage</b>.</p>
 
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/local-rag-document-assistant/main/chatbot_ui.png" class="project-img">
+                <img src="https://raw.githubusercontent.com/sravyakganti/local-rag-document-assistant/main/chatbot_ui.png" class="project-visual">
             </div>
             <br>
-            <a href="https://github.com/sravyakganti/local-rag-document-assistant" class="btn btn-outline">View Project Code</a>
+            <a href="https://github.com/sravyakganti/local-rag-document-assistant" class="btn-outline">View Project Code</a>
         </div>
 
         <!-- Project 3 -->
-        <div class="card">
-            <h3 style="color: #fb923c;">3. E-Commerce Retention & Cohort Analysis</h3>
-            <p style="color: #94a3b8; font-size: 1rem;"><b>STACK:</b> Advanced SQL, DuckDB, Tableau</p>
+        <div class="project-card" style="border-color: #fb923c;">
+            <h3 class="project-title" style="color: #fb923c;">3. E-Commerce Retention & Cohort Analysis</h3>
+            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 20px;"><b>STACK:</b> Advanced SQL, DuckDB, Tableau</p>
             
-            <div class="project-section">
-                <span class="label-challenge">🛑 The Challenge</span>
-                <p class="project-text">High Customer Acquisition Costs (CAC) make retention critical, yet the business lacked visibility into specific cohort drop-off points, leading to wasted marketing spend.</p>
-            </div>
+            <span class="tag-challenge">🛑 The Challenge</span>
+            <p class="project-desc">High Customer Acquisition Costs (CAC) make retention critical, yet the business lacked visibility into specific cohort drop-off points.</p>
             
-            <div class="project-section">
-                <span class="label-solution">⚡ The Solution</span>
-                <p class="project-text">Developed a reusable <b>SQL Pipeline</b> using complex Window Functions (CTEs) to normalize transaction data. Visualized a critical <b>15% retention drop</b> in Q1 using <b>Tableau LOD expressions</b>, driving targeted re-engagement strategies.</p>
-            </div>
+            <span class="tag-solution">⚡ The Solution</span>
+            <p class="project-desc">Developed a reusable <b>SQL Pipeline</b> using complex Window Functions (CTEs) to normalize transaction data. Visualized a critical <b>15% retention drop</b> in Q1 using <b>Tableau LOD expressions</b>.</p>
 
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/ecommerce-retention-sql/main/E-commerce%20Customer%20tableau.png" class="project-img">
+                <img src="https://raw.githubusercontent.com/sravyakganti/ecommerce-retention-sql/main/E-commerce%20Customer%20tableau.png" class="project-visual">
             </div>
             <br>
             <a href="https://public.tableau.com/app/profile/sravya.kodavatiganti/viz/Ecommerce_Customer_Retention/E-CommerceCustomerRetentionCohorts?publish=yes" class="btn">Interactive Dashboard</a>
         </div>
 
         <!-- Project 4 -->
-        <div class="card">
-            <h3 style="color: #facc15;">4. Telco Subscription Risk Dashboard</h3>
-            
-            <div class="project-section">
-                <span class="label-challenge">🛑 The Challenge</span>
-                <p class="project-text">A Telecom provider faced rising churn rates but lacked actionable insights into which specific demographics and contract types were high-risk.</p>
-            </div>
-            
-            <div class="project-section">
-                <span class="label-solution">⚡ The Solution</span>
-                <p class="project-text">Designed an executive <b>Power BI Dashboard</b> utilizing complex <b>DAX measures</b> to dynamically model churn probability. Identified high-risk segments, enabling the retention team to prioritize intervention for at-risk revenue.</p>
-            </div>
-
+        <div class="project-card">
+            <h3 class="project-title" style="color: #facc15;">4. Telco Subscription Risk Dashboard</h3>
+            <span class="tag-solution">⚡ The Solution</span>
+            <p class="project-desc">Designed an executive <b>Power BI Dashboard</b> utilizing complex <b>DAX measures</b> to dynamically model churn probability. Identified high-risk segments, enabling the retention team to prioritize intervention.</p>
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/Telco-Churn-Power-BI-/main/Executive%20Overview.png" class="project-img">
+                <img src="https://raw.githubusercontent.com/sravyakganti/Telco-Churn-Power-BI-/main/Executive%20Overview.png" class="project-visual">
             </div>
             <br>
             <a href="https://github.com/sravyakganti/Telco-Churn-Power-BI-" class="btn">View Power BI Files</a>
         </div>
 
         <!-- Project 5 -->
-        <div class="card">
-            <h3 style="color: #38bdf8;">5. End-to-End Automated BI Pipeline</h3>
-            
-            <div class="project-section">
-                <span class="label-challenge">🛑 The Challenge</span>
-                <p class="project-text">Manual CSV dumps resulted in stale data latency (24+ hours) and error-prone reporting, hindering real-time decision making.</p>
-            </div>
-            
-            <div class="project-section">
-                <span class="label-solution">⚡ The Solution</span>
-                <p class="project-text">Built a fully automated <b>Modern Data Stack</b> pipeline. Orchestrated data flow from API → <b>Snowflake</b> → Power BI using <b>dbt</b> for transformation and <b>GitHub Actions</b> for CI/CD, reducing reporting latency to near real-time.</p>
-            </div>
-
+        <div class="project-card">
+            <h3 class="project-title" style="color: #38bdf8;">5. End-to-End Automated BI Pipeline</h3>
+            <span class="tag-solution">⚡ The Solution</span>
+            <p class="project-desc">Built a fully automated <b>Modern Data Stack</b> pipeline. Orchestrated data flow from API → <b>Snowflake</b> → Power BI using <b>dbt</b> for transformation and <b>GitHub Actions</b> for CI/CD.</p>
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/End-to-End-Data-BI-Pipeline/main/dashboard-screenshot.png" class="project-img">
+                <img src="https://raw.githubusercontent.com/sravyakganti/End-to-End-Data-BI-Pipeline/main/dashboard-screenshot.png" class="project-visual">
             </div>
             <br>
             <a href="https://github.com/sravyakganti/End-to-End-Data-BI-Pipeline" class="btn">View Pipeline Code</a>
         </div>
 
         <!-- Project 6 -->
-        <div class="card">
-            <h3 style="color: #a78bfa;">6. Supply Chain Dimensional Modeling</h3>
-            
-            <div class="project-section">
-                <span class="label-challenge">🛑 The Challenge</span>
-                <p class="project-text">Analytical queries on raw 3NF transactional data were causing timeouts and reporting delays due to inefficient joins.</p>
-            </div>
-            
-            <div class="project-section">
-                <span class="label-solution">⚡ The Solution</span>
-                <p class="project-text">Re-architected the data warehouse into a <b>Kimball Star Schema</b>. Optimized Fact and Dimension tables reduced query execution time by <b>60%</b>, enabling self-service analytics.</p>
-            </div>
-
+        <div class="project-card">
+            <h3 class="project-title" style="color: #a78bfa;">6. Supply Chain Dimensional Modeling</h3>
+            <span class="tag-solution">⚡ The Solution</span>
+            <p class="project-desc">Re-architected the data warehouse into a <b>Kimball Star Schema</b>. Optimized Fact and Dimension tables reduced query execution time by <b>60%</b>.</p>
             <div align="center">
-                <img src="https://raw.githubusercontent.com/sravyakganti/Supply-Chain-Data-Modeling/main/Data%20Modeling.png" class="project-img">
+                <img src="https://raw.githubusercontent.com/sravyakganti/Supply-Chain-Data-Modeling/main/Data%20Modeling.png" class="project-visual">
             </div>
             <br>
-            <a href="https://github.com/sravyakganti/Supply-Chain-Data-Modeling" class="btn btn-outline">View Data Model</a>
+            <a href="https://github.com/sravyakganti/Supply-Chain-Data-Modeling" class="btn-outline">View Data Model</a>
         </div>
 
-        <!-- ACADEMIC SECTION -->
-        <h2 id="academic" class="section-title" style="border-color: #facc15;">🎓 Academic Highlights</h2>
-        <div class="card">
-            <ul style="font-size: 1.2rem; color: #c9d1d9; font-weight: 300;">
-                <li style="margin-bottom: 20px;"><b>Big Data Reporting & ETL Optimization:</b> Built MapReduce workflows using <b>Apache Oozie</b>, improving ETL data throughput by <b>45%</b> across 3 reporting pipelines.</li>
+        <!-- ACADEMIC -->
+        <h2 id="academic" class="section-header" style="border-color: #facc15;">🎓 Academic Highlights</h2>
+        <div class="project-card">
+            <ul style="font-size: 1.3rem; color: #c9d1d9;">
+                <li style="margin-bottom: 25px;"><b>Big Data Reporting & ETL Optimization:</b> Built MapReduce workflows using <b>Apache Oozie</b>, improving ETL data throughput by <b>45%</b> across 3 reporting pipelines.</li>
                 <li><b>GenAI-Ready Image & Data Processing:</b> Enabled remote diagnostics for <b>1,000+ users</b>, reducing in-person consultations by <b>35%</b> in 2 months.</li>
             </ul>
         </div>
@@ -479,10 +492,10 @@
     </div>
 
     <!-- FOOTER -->
-    <div style="text-align: center; padding: 80px 20px; background: #0d1117; border-top: 1px solid #30363d; margin-top: 50px;">
-        <h2 style="color: #e2e8f0; font-weight: 300;">Ready to build scalable data solutions?</h2>
+    <div style="text-align: center; padding: 100px 20px; background: #000000; border-top: 1px solid #30363d; margin-top: 50px;">
+        <h2 style="color: #e2e8f0; font-weight: 300; font-size: 2.5rem;">Ready to build scalable data solutions?</h2>
         <a href="mailto:sravya.sravya1999@gmail.com">
-            <img src="https://img.shields.io/badge/SEND_ME_AN_EMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white&height=60">
+            <img src="https://img.shields.io/badge/SEND_ME_AN_EMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white&height=70">
         </a>
     </div>
 
