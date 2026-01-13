@@ -19,7 +19,7 @@
             --accent-yellow: #eab308;
         }
 
-        html { scroll-behavior: smooth; } /* Enables smooth scrolling navigation */
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', sans-serif;
@@ -172,25 +172,6 @@
         .job-title { font-size: 2rem; color: white; font-weight: 700; margin: 0; }
         .job-meta { font-size: 1.1rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 20px; text-transform: uppercase; }
 
-        /* --- PROJECT SUB-NAV (New Feature) --- */
-        .project-nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 40px;
-        }
-        .project-link {
-            background: #21262d;
-            border: 1px solid #30363d;
-            padding: 10px 20px;
-            border-radius: 50px;
-            color: #8b949e;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: 0.2s;
-        }
-        .project-link:hover { background: var(--accent-blue); color: #0d1117; transform: translateY(-3px); }
-
         /* --- PROJECT CARDS --- */
         .project-card {
             background: var(--card-bg);
@@ -198,7 +179,6 @@
             border-radius: 20px;
             padding: 40px;
             margin-bottom: 60px;
-            scroll-margin-top: 120px; /* Fixes scroll position behind sticky nav */
         }
         .project-title { font-size: 2.2rem; color: var(--accent-blue); font-weight: 800; margin-top: 0; }
         
@@ -207,9 +187,10 @@
         
         .project-desc { font-size: 1.3rem; color: #cbd5e1; margin-top: 0; margin-bottom: 15px; }
 
+        /* SMALLER IMAGE SIZE FOR PROJECTS */
         .project-visual {
             width: 100%;
-            max-width: 900px;
+            max-width: 600px; /* Reduced from 900px */
             border-radius: 12px;
             border: 2px solid #30363d;
             margin-top: 30px;
@@ -256,7 +237,7 @@
             BI Engineer <span style="color:#38bdf8">|</span> Data Engineer <span style="color:#38bdf8">|</span> Data Scientist
         </div>
         <div class="contact-info">
-            📍 California, USA &nbsp;&nbsp;•&nbsp;&nbsp; 📞 +1 (201) 726-0636
+            📍 California, USA &nbsp;&nbsp;•&nbsp;&nbsp; 📞 +1(201)-726-0636
         </div>
 
         <div class="bio-box">
@@ -303,7 +284,7 @@
             </div>
             <p style="color: #94a3b8; font-style: italic; margin-bottom: 20px;">FinTech | USA</p>
             <ul style="font-size: 1.2rem; color: #e2e8f0;">
-                <li><b>GenAI Strategy:</b> Architected an end-to-end <b>RAG Solution</b> automating financial reporting, cutting review time by <b>33%</b>.</li>
+                <li><b>GenAI Implementation:</b> Architected an end-to-end <b>RAG Solution</b> automating financial reporting, cutting review time by <b>33%</b>.</li>
                 <li><b>Cloud Engineering:</b> Migrated critical pipelines to <b>Azure Data Factory</b>, slashing data ingestion latency by <b>42%</b>.</li>
                 <li><b>Fraud Detection:</b> Integrated anomaly detection models into BI workflows, reducing fraud review cycles by <b>20%</b>.</li>
                 <li><b>Governance:</b> Achieved <b>99.9% reporting accuracy</b> for regulatory submissions via automated Python testing.</li>
@@ -372,19 +353,6 @@
 
         <!-- PROJECTS -->
         <h2 id="projects" class="section-header">🚀 Featured Projects</h2>
-        
-        <!-- PROJECT NAVIGATION BAR -->
-        <div class="project-nav">
-            <a href="#p1" class="project-link">1. MLOps Engine</a>
-            <a href="#p2" class="project-link">2. GenAI Chatbot</a>
-            <a href="#p3" class="project-link">3. E-Commerce Retention</a>
-            <a href="#p4" class="project-link">4. Telco Churn</a>
-            <a href="#p5" class="project-link">5. Data Pipeline</a>
-            <a href="#p6" class="project-link">6. Star Schema</a>
-        </div>
-
-        <!-- PROJECTS SECTION -->
-        <h2 id="projects" class="section-title">🚀 Featured Projects</h2>
 
         <!-- Project 1 -->
         <div class="card">
@@ -470,7 +438,8 @@
                 <img src="https://raw.githubusercontent.com/sravyakganti/ecommerce-retention-sql/main/E-commerce%20Customer%20tableau.png" class="project-img">
             </div>
             <br>
-            <a href="https://public.tableau.com/app/profile/sravya.kodavatiganti/viz/Ecommerce_Customer_Retention/E-CommerceCustomerRetentionCohorts?publish=yes" class="btn">Interactive Dashboard</a>
+            <a href="YOUR_TABLEAU_PUBLIC_LINK_HERE" class="btn">Interactive Dashboard</a>
+            <a href="YOUR_MEDIUM_LINK_HERE" class="btn btn-outline">Read Case Study</a>
         </div>
 
         <!-- Project 4 -->
@@ -560,24 +529,11 @@
 
         <!-- ACADEMIC SECTION -->
         <h2 id="academic" class="section-header" style="border-left-color: #facc15;">🎓 Academic Highlights</h2>
-        <div class="project-card">
-            <div class="project-section">
-                <h3 style="color: #facc15;">Big Data Reporting & ETL Optimization</h3>
-                <span class="tag-challenge">🛑 The Challenge</span>
-                <p class="project-desc">Legacy ETL processes were too slow to handle growing data volumes, causing reporting delays.</p>
-                <span class="tag-solution">⚡ The Solution</span>
-                <p class="project-desc">Built MapReduce workflows using <b>Apache Oozie</b>, improving ETL data throughput by <b>45%</b> across 3 reporting pipelines.</p>
-            </div>
-            
-            <hr style="border-color: #30363d; margin: 30px 0;">
-
-            <div class="project-section">
-                <h3 style="color: #facc15;">GenAI-Ready Image & Data Processing</h3>
-                <span class="tag-challenge">🛑 The Challenge</span>
-                <p class="project-desc">Remote diagnostics were inefficient due to poor image processing pipelines.</p>
-                <span class="tag-solution">⚡ The Solution</span>
-                <p class="project-desc">Enabled remote diagnostics for <b>1,000+ users</b>, reducing in-person consultations by <b>35%</b> in 2 months.</p>
-            </div>
+        <div class="card">
+            <ul style="font-size: 1.2rem; color: #c9d1d9; font-weight: 300;">
+                <li style="margin-bottom: 20px;"><b>Big Data Reporting & ETL Optimization:</b> Built MapReduce workflows using <b>Apache Oozie</b>, improving ETL data throughput by <b>45%</b> across 3 reporting pipelines.</li>
+                <li><b>GenAI-Ready Image & Data Processing:</b> Enabled remote diagnostics for <b>1,000+ users</b>, reducing in-person consultations by <b>35%</b> in 2 months.</li>
+            </ul>
         </div>
 
     </div>
